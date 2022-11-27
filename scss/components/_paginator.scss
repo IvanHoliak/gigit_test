@@ -1,0 +1,101 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    &__wrapper {
+        position: relative;
+    }
+
+    &__list {
+        list-style: none;
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        @include typography(1.4rem, 400, 1.5);
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        &:first-child {
+            border-radius: 50%;
+            background-color: $color-light-grey-2;
+        }
+
+        
+        &--active {
+            @include typography(1.4rem, 600, 1.5);
+            pointer-events: none;
+        }
+    }
+    
+    &__link:link,
+    &__link:visited {
+        display: inline-block;
+        color: $color-black;
+        font-family: inherit;
+        text-decoration: none;
+        transition: all .3s ease;
+        position: relative;
+    }
+
+    &__link:hover,
+    &__link:active {
+        @include typography(1.4rem, 600, 1.5);
+
+        &::after {
+            content: "";
+            height: 2px;
+            width: 100%;
+            background-color: $color-black;;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    &__control {
+        border: none;
+        background-color: transparent;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        transition: background-color .3s ease;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+
+        &:hover,
+        &:active {
+            background-color: $color-light-grey-3;
+        }
+
+        &--prev {
+            left: -6rem;
+
+            @include respond(phone) {
+                left: -4.5rem;
+            }
+        }
+
+        &--next {
+            right: -6rem;
+
+            @include respond(phone) {
+                right: -4.5rem;
+            }
+        }
+    }
+}

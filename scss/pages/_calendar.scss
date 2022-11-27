@@ -1,0 +1,214 @@
+.calendar {
+    &__mob {
+        display: none;
+
+        @include respond(phone) {
+            display: grid !important;
+        }
+    }
+    &__accordion {
+        display: flex;
+        flex-direction: column;
+        gap: .8rem;
+        height: 0;
+        opacity: 0;
+
+        transition: height .3s ease, opacity .3s ease;
+
+        .calendar__body-cell {
+            pointer-events: none;
+        }
+
+        &--active {
+            height: calc((10rem * 5) + (.8rem * 4));
+            opacity: 1;
+
+            .calendar__body-cell {
+                pointer-events: all;
+            }
+        }
+    }
+    &__header {
+        gap: .8rem;
+        margin-bottom: 1.2rem;
+
+        @include respond(phone) {
+            display: none;
+        }
+
+        &-cell {
+            height: 4rem;
+            background-color: $color-light-grey-2;
+            border-radius: 8px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include typography(1rem, 500, 1.6);
+            letter-spacing: 1px;
+        }
+    }
+
+    &__body {
+        gap: .8rem;
+
+        @include respond(phone) {
+            display: none;
+        }
+
+        &-cell {
+            padding: 1.2rem;
+            border: 1px solid $color-light-grey-1;
+            border-radius: 6px;
+            height: 16.4rem;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+
+            cursor: pointer;
+            transition: all .3s ease;
+
+            @include respond(tab-land) {
+                padding: .8rem;
+                height: 14rem;
+            }
+
+            @include respond(tab-port) {
+                padding: .8rem;
+                height: 12.5rem;
+            }
+
+            @include respond(phone) {
+                height: 10rem;
+            }
+
+            h3 {
+                position: absolute;
+                top: 7%;
+                left: 8%;
+
+                @include respond(phone) {
+                    font-size: 2rem;
+                    top: 50%;
+                    left: 5%;
+                    transform: translateY(-50%);
+                }
+            }
+
+            &:hover {
+                border: none;
+                box-shadow: 0 0 20px $color-light-grey-1;
+            }
+        }
+    }
+
+    &__another-month {
+        color: $color-dark-grey-3;
+    }
+
+    &__date-available {
+
+        &--busy {
+            background-color: $color-coral;
+            border-radius: 6px;
+    
+            p {
+                color: $color-white;
+            }
+        }
+
+        &--one {
+            padding: 8px 8px 12px 8px;
+            @include respond(tab-port) {
+                padding: 3px;
+            }
+
+            @include respond(phone) {
+                padding: 8px 8px 12px 8px;
+            }
+        }
+
+        &--many {
+            padding: 3px 8px;
+            display: flex;
+            gap: 8px;
+
+            @include respond(tab-port) {
+                padding: 3px 3px;
+                gap: 3px;
+                flex-wrap: wrap;
+            }
+
+            @include respond(phone) {
+                padding: 3px 8px;
+                gap: 8px;
+            }
+        }
+    }
+
+    &__desc--many {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        @include respond(phone) {
+            align-items: center;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    &__icons {
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+    }
+
+    &__current-day {
+        background-color: $color-light-grey-2;
+        border: 1px solid $color-light-grey-2;
+    }
+
+    &__cell-head {
+        @include typography(1.3rem, 600, 1.4);
+        color: $color-dark-grey-2;
+        margin-bottom: 4px;
+
+        @include respond(tab-port) {
+            font-size: 1rem !important;
+        }
+
+        @include respond(phone) {
+            font-size: 1.3rem !important;
+        }
+    }
+
+    &__cell-body {
+        @include typography(1.3rem, 400, 1.4);
+        color: $color-dark-grey-2;
+
+        @include respond(tab-port) {
+            font-size: 1rem !important;
+        }
+
+        @include respond(phone) {
+            font-size: 1.3rem !important;
+        }
+    }
+}
+
+.btn__date {
+    &-next,
+    &-prev {
+        background-color: transparent;
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Gigit &mdash; Chat</title>
+    </head>
+    <body>
+        <div class="grid col-3--left">
+            <nav class="navigation">
+                <header class="header">
+                    <a href="#" class="logo">
+                        <img class="logo-img" src="assets/img/logo-short.png" alt="Logo Gigit" />
+                    </a>
+                </header>
+                <ul class="navigation-list">
+                    <li class="navigation-list__item">
+                        <a href="./calendar.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./muso.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-music" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./favorite-artists.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-favorites-default" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./chat-paid.html" class="navigation-list__link navigation-list__link--active">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-messages" />
+                            </svg>
+                            <p class="navigation-list__notif">1</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./invoices.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-file_invoice" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="#" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-bell" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./profile-venue-empty.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-user" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="#" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-arrow-bar-right" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="navigation__mob">
+                <header class="header">
+                    <a href="#" class="logo">
+                        <img class="logo-img" src="assets/img/logo-full.png" alt="Logo Gigit" />
+                    </a>
+                </header>
+                <ul class="navigation-list">
+                    <li class="navigation-list__item">
+                        <a href="./calendar.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" />
+                            </svg>
+                            <p class="navigation-list__text">Calendar</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./muso.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-music" />
+                            </svg>
+                            <p class="navigation-list__text">Browse</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./favorite-artists.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-favorites-default" />
+                            </svg>
+                            <p class="navigation-list__text">Favorites</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./chat-paid.html" class="navigation-list__link navigation-list__link--active">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-messages" />
+                            </svg>
+                            <p class="navigation-list__notif">1</p>
+                            <p class="navigation-list__text">Chat</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./invoices.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-file_invoice" />
+                            </svg>
+                            <p class="navigation-list__text">Invoices</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="#" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-bell" />
+                            </svg>
+                            <p class="navigation-list__text">Notification</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./profile-venue-empty.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-user" />
+                            </svg>
+                            <p class="navigation-list__text">Profile</p>
+                        </a>
+                    </li>
+                </ul>
+                <button class="btn navigation__mob__burger-menu">
+                    <div class="line"></div>
+                </button>
+            </nav>
+            <aside class="aside-left">
+                <header class="header u-border-b-none">
+                    <form action="#" class="chat-search-form">
+                        <div class="input-box">
+                            <input type="text" class="input" placeholder="Search venues" disabled/>
+                            <button class="btn__input" disabled>
+                                <svg class="icon">
+                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-search" />
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </header>
+            </aside>
+            <main class="content chat-content content--empty">
+                <div class="content__empty-box">
+                    <svg class="icon icon--big">
+                        <use xlink:href="assets/sprites/sprite-icon.svg#icon-messages-big" />
+                    </svg>
+                    <h2 class="heading-secondary u-margin-bottom-bigest u-margin-top-medium">There are no conversations yet</h2>
+                    <a href="./muso.html" class="btn btn--small btn__primary">Browse</a>
+                </div>
+            </main>
+        </div>
+
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>

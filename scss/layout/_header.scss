@@ -1,0 +1,53 @@
+.header {
+    border-bottom: 1px solid $color-light-grey-1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    h1 {
+        margin-right: 2rem;
+    }
+}
+
+nav .header,
+main .header {
+    padding: 3.2rem 0 2.4rem;
+}
+
+.main-content .header {
+    padding: 2.7rem 0 2.2rem;
+}
+
+.aside-left .header {
+    padding: 3.1rem 0 1.9rem;
+}
+
+.aside-right .header {
+    padding: 4rem 0 2.6rem;
+}
+
+.header {
+    @include respond(tab-land) {
+        min-height: 9.8rem !important;
+        padding: 0 !important;
+    }
+}
+
+main .header,
+.aside-left .header {
+    @include respond(phone) {
+        padding-left: 60px !important;
+        gap: 0;
+        flex-wrap: wrap;
+
+        form {
+            width: 100%;
+
+            .input-box {
+                flex: 1;
+            }
+        }
+    }
+}

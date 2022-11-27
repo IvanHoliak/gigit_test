@@ -1,0 +1,148 @@
+.profile-btns {
+    display: flex;
+    align-items: center;
+    gap: 5.2rem;
+    margin-left: auto;
+}
+
+.profile {
+    &-content {
+        padding-top: 3.2rem;
+    }
+
+    &__logo {
+        width: 16rem;
+        height: 16rem;
+        border-radius: 6px;
+
+        position: relative;
+
+        z-index: 1;
+
+        @include respond(phone) {
+            margin: 0 auto 5.6rem;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        &-change-btn {
+            border: none;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background-color: $color-light-grey-2;
+            cursor: pointer;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: absolute;
+            right: -2rem;
+            bottom: -2rem;
+
+            &:hover .icon {
+                fill: $color-black;
+            }
+        }
+    }
+
+    &__add-details {
+        width: 100%;
+        padding: 2.2rem 2.8rem;
+        border: 1px solid $color-light-grey-1;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include respond(tab-port) {
+            flex-wrap: wrap;
+            gap: 2rem 0;
+
+            .btn_show_popup {
+                margin-left: auto;
+            }
+        }
+
+        &__desc {
+            display: flex;
+            align-items: center;
+            gap: 2.4rem;
+        }
+
+        &__btn {
+            &,
+            &:link,
+            &:visited {
+                padding: 0.9rem 4.2rem;
+            }
+        }
+    }
+
+    &__import-btn {
+        &:link,
+        &:visited {
+            padding: 0.9rem 2.4rem;
+        }
+    }
+
+    &__remove-btn {
+        &:link,
+        &:visited {
+            padding: 0.9rem 1.1rem;
+            margin-top: 3.6rem;
+        }
+    }
+
+    &__update-access {
+        &:link,
+        &:visited {
+            max-width: 16rem;
+            padding: 0.9rem 2.8rem;
+            display: block;
+            margin-left: auto;
+            margin-top: 3.3rem;
+        }
+    }
+
+    &__upgrade-plan {
+        &:link,
+        &:visited {
+            max-width: 16rem;
+            padding: 0.9rem 1.75rem;
+            display: block;
+            margin-left: auto;
+            margin-top: 3.3rem;
+        }
+    }
+
+    &__details-flex {
+        display: flex;
+        gap: 8rem;
+
+        @include respond(tab-land) {
+            flex-direction: column;
+        }
+    }
+
+    &__details {
+        flex: 1;
+
+        &-content__detail {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid $color-light-grey-1;
+        }
+    }
+
+    &__subscription {
+        flex: 1;
+    }
+}

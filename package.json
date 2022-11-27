@@ -1,0 +1,18 @@
+{
+    "name": "gigit",
+    "version": "1.0.0",
+    "description": "Intern project",
+    "main": "index.js",
+    "scripts": {
+        "dev:server": "live-server --port=5000",
+        "prod:server": "live-server --port=5050 --open=./sign-up.html",
+        "watch:sass": "node-sass scss/main.scss css/style.css --watch",
+        "compile:sass": "node-sass scss/main.scss css/style.css"
+    },
+    "author": "Ivan Holiak",
+    "license": "ISC",
+    "devDependencies": {
+        "live-server": "^1.2.2",
+        "node-sass": "^8.0.0"
+    }
+}

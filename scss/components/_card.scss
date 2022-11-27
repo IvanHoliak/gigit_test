@@ -1,0 +1,88 @@
+.input__plan {
+    display: none;
+
+    &:checked + .card__plan-btn {
+        border: 1px solid $color-coral;
+    }
+    
+    &:checked + .card__plan-btn .card__plan-btn__radio {
+        border: 1.5px solid $color-coral;
+
+        &::after {
+            content: "";
+            width: 0.8rem;
+            height: 0.8rem;
+            border-radius: 50%;
+            background-color: $color-coral;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.card {
+    width: 100%;
+
+    &:not(:last-child) {
+        margin-bottom: 1.6rem;
+    }
+
+    &__plan-btn {
+        width: 100%;
+        padding: 1.6rem 2.4rem 2.2rem 1.6rem;
+        border: 1px solid $color-light-grey-1;
+        border-radius: 6px;
+
+        display: flex;
+        align-items: flex-start;
+
+        cursor: pointer;
+
+        &__radio {
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 50%;
+            border: 1.5px solid $color-light-grey-2;
+            margin-right: 1.2rem;
+            margin-top: 6px;
+
+            position: relative;
+        }
+
+        &__desc,
+        &__price {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        &__desc {
+            align-items: flex-start;
+        }
+        
+        &__price {
+            align-items: flex-end;
+            margin-left: auto;
+        }
+    }
+
+    &--active {
+
+    }
+
+    &--current {
+        .card__plan-btn {
+            pointer-events: none;
+            cursor: default;
+            color: $color-dark-grey-2;
+
+            &__price p {
+                color:$color-coral;
+
+            }
+        }
+    }
+}

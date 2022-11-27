@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Gigit &mdash; Favorite Artists</title>
+    </head>
+    <body>
+        <div class="grid col-2">
+            <nav class="navigation">
+                <header class="header">
+                    <a href="#" class="logo">
+                        <img class="logo-img" src="assets/img/logo-short.png" alt="Logo Gigit" />
+                    </a>
+                </header>
+                <ul class="navigation-list">
+                    <li class="navigation-list__item">
+                        <a href="./calendar.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./muso.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-music" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./favorite-artists.html" class="navigation-list__link navigation-list__link--active">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-favorites-default" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./chat-paid.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-messages" />
+                            </svg>
+                            <p class="navigation-list__notif">1</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./invoices.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-file_invoice" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="#" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-bell" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./profile-venue-empty.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-user" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="#" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-arrow-bar-right" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="navigation__mob">
+                <header class="header">
+                    <a href="#" class="logo">
+                        <img class="logo-img" src="assets/img/logo-full.png" alt="Logo Gigit" />
+                    </a>
+                </header>
+                <ul class="navigation-list">
+                    <li class="navigation-list__item">
+                        <a href="./calendar.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" />
+                            </svg>
+                            <p class="navigation-list__text">Calendar</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./muso.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-music" />
+                            </svg>
+                            <p class="navigation-list__text">Browse</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./favorite-artists.html" class="navigation-list__link navigation-list__link--active">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-favorites-default" />
+                            </svg>
+                            <p class="navigation-list__text">Favorites</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./chat-paid.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-messages" />
+                            </svg>
+                            <p class="navigation-list__notif">1</p>
+                            <p class="navigation-list__text">Chat</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./invoices.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-file_invoice" />
+                            </svg>
+                            <p class="navigation-list__text">Invoices</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="#" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-bell" />
+                            </svg>
+                            <p class="navigation-list__text">Notification</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./profile-venue-empty.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-user" />
+                            </svg>
+                            <p class="navigation-list__text">Profile</p>
+                        </a>
+                    </li>
+                </ul>
+                <button class="btn navigation__mob__burger-menu">
+                    <div class="line"></div>
+                </button>
+            </nav>
+            <main class="content">
+                <header class="header">
+                    <h1 class="heading-primary">Favorite Artists</h1>
+                </header>
+                <section class="favorite-content">
+                    <form action="#" class="form-filter u-margin-bottom-medium-4">
+                        <div class="input-box">
+                            <input type="text" class="input input-dropdown" data-datalist="size-list" placeholder="Size" id="input-size"/>
+                            <ul class="datalist size-list">
+                                <li data-value="all" title="All size" class="datalist-item">All size</li>
+                                <li data-value="Band" title="Band" class="datalist-item">Band</li>
+                                <li data-value="Solo" title="Solo" class="datalist-item">Solo</li>
+                            </ul>
+                            <label for="input-size" class="btn__input btn__input--down">
+                                <svg class="icon">
+                                    <use
+                                        xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-down" />
+                                </svg>
+                            </label>
+                            <label for="input-size" class="btn__input btn__input--up">
+                                <svg class="icon">
+                                    <use
+                                        xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-up" />
+                                </svg>
+                            </label>
+                            <button class="btn__input btn__input--remove">
+                                <svg class="icon">
+                                    <use
+                                        xlink:href="assets/sprites/sprite-icon.svg#icon-close" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" class="input input-dropdown" data-datalist="genre-list" placeholder="Genre" id="input-genre"/>
+                            <ul class="datalist genre-list">
+                                <li data-value="all" title="All genres" class="datalist-item">All genres</li>
+                                <li data-value="Rock" title="Rock" class="datalist-item">Rock</li>
+                                <li data-value="Alternative" title="Alternative" class="datalist-item">Alternative</li>
+                                <li data-value="Nu metal" title="Nu metal" class="datalist-item">Nu metal</li>
+                                <li data-value="Grunge" title="Grunge" class="datalist-item">Grunge</li>
+                                <li data-value="Hard Rock" title="Hard Rock" class="datalist-item">Hard Rock</li>
+                                <li data-value="Post-grunge" title="Post-grunge" class="datalist-item">Post-grunge</li>
+                            </ul>
+                            <label for="input-genre" class="btn__input btn__input--down">
+                                <svg class="icon">
+                                    <use
+                                        xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-down" />
+                                </svg>
+                            </label>
+                            <label for="input-genre" class="btn__input btn__input--up">
+                                <svg class="icon">
+                                    <use
+                                        xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-up" />
+                                </svg>
+                            </label>
+                            <button class="btn__input btn__input--remove">
+                                <svg class="icon">
+                                    <use
+                                        xlink:href="assets/sprites/sprite-icon.svg#icon-close" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="input-box">
+                            <input class="input input__datepick" type="text" placeholder="All time" type="text" readonly="readonly" id="input-datepick"/>
+                            <label for="input-datepick" class="btn__input">
+                                <svg class="icon">
+                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" />
+                                </svg>
+                            </label>
+                            <div class="datepicker">
+                                <div class="datepicker-container">
+                                    <div class="datepicker-left">
+                                        <div class="datepicker-header">
+                                            <button class="btn__circle datepicker__btn datepicker__btn--prev">
+                                                <svg class="icon">
+                                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-left" />
+                                                </svg>
+                                            </button>
+                                            <p class="datepicker__date">September 2021</p>
+                                        </div>
+                                        <table class="datepicker__table">
+                                            <thead class="datepicker__table-header">
+                                                <tr class="datepicker__table-header__row">
+                                                    <td class="datepicker__table-header__item">Mo</td>
+                                                    <td class="datepicker__table-header__item">Tu</td>
+                                                    <td class="datepicker__table-header__item">We</td>
+                                                    <td class="datepicker__table-header__item">Th</td>
+                                                    <td class="datepicker__table-header__item">Fr</td>
+                                                    <td class="datepicker__table-header__item">Sa</td>
+                                                    <td class="datepicker__table-header__item">Su</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="datepicker__table-body">
+                                                <tr class="datepicker__table-body__row">
+                                                </tr>
+                                                <tr class="datepicker__table-body__row">
+                                                </tr>
+                                                <tr class="datepicker__table-body__row">
+                                                </tr>
+                                                <tr class="datepicker__table-body__row">
+                                                </tr>
+                                                <tr class="datepicker__table-body__row">
+                                                </tr>
+                                                <tr class="datepicker__table-body__row">
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="datepicker-right">
+                                        <div class="datepicker-header">
+                                            <button class="btn__circle datepicker__btn datepicker__btn--next">
+                                                <svg class="icon">
+                                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-right" />
+                                                </svg>
+                                            </button>
+                                            <p class="datepicker__date">October 2021</p>
+                                        </div>
+                                        <table class="datepicker__table">
+                                            <thead class="datepicker__table-header">
+                                                <tr class="datepicker__table-header__row">
+                                                    <td class="datepicker__table-header__item">Mo</td>
+                                                    <td class="datepicker__table-header__item">Tu</td>
+                                                    <td class="datepicker__table-header__item">We</td>
+                                                    <td class="datepicker__table-header__item">Th</td>
+                                                    <td class="datepicker__table-header__item">Fr</td>
+                                                    <td class="datepicker__table-header__item">Sa</td>
+                                                    <td class="datepicker__table-header__item">Su</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="datepicker__table-body">
+                                                <tr class="datepicker__table-body__row">
+                                                </tr>
+                                                <tr class="datepicker__table-body__row">
+                                                </tr>
+                                                <tr class="datepicker__table-body__row">
+                                                </tr>
+                                                <tr class="datepicker__table-body__row">
+                                                </tr>
+                                                <tr class="datepicker__table-body__row">
+                                                </tr>
+                                                <tr class="datepicker__table-body__row">
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" class="input" placeholder="Search" id="input-search"/>
+                            <label for="input-search" class="btn__input">
+                                <svg class="icon">
+                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-search" />
+                                </svg>
+                            </label>
+                        </div>
+                    </form>
+
+                    <table class="table table-favorite u-margin-bottom-medium-2">
+                        <thead>
+                            <tr>
+                                <td>
+                                    <button class="table__sort-btn">
+                                        Muso
+                                        <svg class="icon">
+                                            <use xlink:href="assets/sprites/sprite-icon.svg#icon-caret-down" />
+                                        </svg>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="table__sort-btn">
+                                        Act size
+                                        <svg class="icon">
+                                            <use xlink:href="assets/sprites/sprite-icon.svg#icon-caret-down" />
+                                        </svg>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="table__sort-btn">
+                                        Genre
+                                        <svg class="icon">
+                                            <use xlink:href="assets/sprites/sprite-icon.svg#icon-caret-down" />
+                                        </svg>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="table__sort-btn">
+                                        Average gig price
+                                        <svg class="icon">
+                                            <use xlink:href="assets/sprites/sprite-icon.svg#icon-caret-down" />
+                                        </svg>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="table__sort-btn">
+                                        Actions
+                                        <svg class="icon">
+                                            <use xlink:href="assets/sprites/sprite-icon.svg#icon-caret-down" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Nirvana
+                                </td>
+                                <td>
+                                    Band
+                                </td>
+                                <td>
+                                    Rock, grunge
+                                </td>
+                                <td>
+                                    $50-150 per hour
+                                </td>
+                                <td>
+                                    <div class="table__row-btns">
+                                        <a href="#" class="btn-tertiary">
+                                            <svg class="icon">
+                                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" /> 
+                                            </svg>
+                                            Book a gig
+                                        </a>
+                                        <button class="btn__circle">
+                                            <svg class="icon">
+                                                <use
+                                                    xlink:href="assets/sprites/sprite-icon.svg#icon-trash" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Linkin Park
+                                </td>
+                                <td>
+                                    Band
+                                </td>
+                                <td>
+                                    Alternative
+                                </td>
+                                <td>
+                                    $50-150 per hour
+                                </td>
+                                <td>
+                                    <div class="table__row-btns">
+                                        <a href="#" class="btn-tertiary">
+                                            <svg class="icon">
+                                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" /> 
+                                            </svg>
+                                            Book a gig
+                                        </a>
+                                        <button class="btn__circle">
+                                            <svg class="icon">
+                                                <use
+                                                    xlink:href="assets/sprites/sprite-icon.svg#icon-trash" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Limp Bizkit
+                                </td>
+                                <td>
+                                    Band
+                                </td>
+                                <td>
+                                    Nu metal
+                                </td>
+                                <td>
+                                    $50-150 per hour
+                                </td>
+                                <td>
+                                    <div class="table__row-btns">
+                                        <a href="#" class="btn-tertiary">
+                                            <svg class="icon">
+                                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" /> 
+                                            </svg>
+                                            Book a gig
+                                        </a>
+                                        <button class="btn__circle">
+                                            <svg class="icon">
+                                                <use
+                                                    xlink:href="assets/sprites/sprite-icon.svg#icon-trash" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Bi-2
+                                </td>
+                                <td>
+                                    Band
+                                </td>
+                                <td>
+                                    Rock
+                                </td>
+                                <td>
+                                    $50-150 per hour
+                                </td>
+                                <td>
+                                    <div class="table__row-btns">
+                                        <a href="#" class="btn-tertiary">
+                                            <svg class="icon">
+                                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" /> 
+                                            </svg>
+                                            Book a gig
+                                        </a>
+                                        <button class="btn__circle">
+                                            <svg class="icon">
+                                                <use
+                                                    xlink:href="assets/sprites/sprite-icon.svg#icon-trash" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    The Who
+                                </td>
+                                <td>
+                                    Band
+                                </td>
+                                <td>
+                                    Rock
+                                </td>
+                                <td>
+                                    $50-150 per hour
+                                </td>
+                                <td>
+                                    <div class="table__row-btns">
+                                        <a href="#" class="btn-tertiary">
+                                            <svg class="icon">
+                                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" /> 
+                                            </svg>
+                                            Book a gig
+                                        </a>
+                                        <button class="btn__circle">
+                                            <svg class="icon">
+                                                <use
+                                                    xlink:href="assets/sprites/sprite-icon.svg#icon-trash" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Staind
+                                </td>
+                                <td>
+                                    Band
+                                </td>
+                                <td>
+                                    Alternative
+                                </td>
+                                <td>
+                                    $50-150 per hour
+                                </td>
+                                <td>
+                                    <div class="table__row-btns">
+                                        <a href="#" class="btn-tertiary">
+                                            <svg class="icon">
+                                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" /> 
+                                            </svg>
+                                            Book a gig
+                                        </a>
+                                        <button class="btn__circle">
+                                            <svg class="icon">
+                                                <use
+                                                    xlink:href="assets/sprites/sprite-icon.svg#icon-trash" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Scorpions
+                                </td>
+                                <td>
+                                    Band
+                                </td>
+                                <td>
+                                    Hard Rock
+                                </td>
+                                <td>
+                                    $50-150 per hour
+                                </td>
+                                <td>
+                                    <div class="table__row-btns">
+                                        <a href="#" class="btn-tertiary">
+                                            <svg class="icon">
+                                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" /> 
+                                            </svg>
+                                            Book a gig
+                                        </a>
+                                        <button class="btn__circle">
+                                            <svg class="icon">
+                                                <use
+                                                    xlink:href="assets/sprites/sprite-icon.svg#icon-trash" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Queen
+                                </td>
+                                <td>
+                                    Band
+                                </td>
+                                <td>
+                                    Rock
+                                </td>
+                                <td>
+                                    $50-150 per hour
+                                </td>
+                                <td>
+                                    <div class="table__row-btns">
+                                        <a href="#" class="btn-tertiary">
+                                            <svg class="icon">
+                                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" /> 
+                                            </svg>
+                                            Book a gig
+                                        </a>
+                                        <button class="btn__circle">
+                                            <svg class="icon">
+                                                <use
+                                                    xlink:href="assets/sprites/sprite-icon.svg#icon-trash" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    The Exies
+                                </td>
+                                <td>
+                                    Band
+                                </td>
+                                <td>
+                                    Post-grunge
+                                </td>
+                                <td>
+                                    $50-150 per hour
+                                </td>
+                                <td>
+                                    <div class="table__row-btns">
+                                        <a href="#" class="btn-tertiary">
+                                            <svg class="icon">
+                                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" /> 
+                                            </svg>
+                                            Book a gig
+                                        </a>
+                                        <button class="btn__circle">
+                                            <svg class="icon">
+                                                <use
+                                                    xlink:href="assets/sprites/sprite-icon.svg#icon-trash" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Nirvana
+                                </td>
+                                <td>
+                                    Band
+                                </td>
+                                <td>
+                                    Rock, grunge
+                                </td>
+                                <td>
+                                    $50-150 per hour
+                                </td>
+                                <td>
+                                    <div class="table__row-btns">
+                                        <a href="#" class="btn-tertiary">
+                                            <svg class="icon">
+                                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" /> 
+                                            </svg>
+                                            Book a gig
+                                        </a>
+                                        <button class="btn__circle">
+                                            <svg class="icon">
+                                                <use
+                                                    xlink:href="assets/sprites/sprite-icon.svg#icon-trash" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="pagination">
+                        <div class="pagination__wrapper">
+                            <ul class="pagination__list">
+                                <li class="pagination__item pagination__item--active">
+                                    <a href="#" class="pagination__link">1</a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a href="#" class="pagination__link">2</a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a href="#" class="pagination__link">3</a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a href="#" class="pagination__link">4</a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a href="#" class="pagination__link">5</a>
+                                </li>
+                                
+                                <li class="pagination__item pagination__item--dots">...</li>
+                                <li class="pagination__item">
+                                    <a href="#" class="pagination__link">10</a>
+                                </li>
+                            </ul>
+    
+                            <button class="pagination__control pagination__control--prev">
+                                <svg class="icon">
+                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-left" />
+                                </svg>
+                            </button>
+                            <button class="pagination__control pagination__control--next">
+                                <svg class="icon">
+                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-right" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <script type="module" src="js/main.js"></script>
+        <script type="module" src="js/calendar.js"></script>
+    </body>
+</html>

@@ -1,0 +1,122 @@
+.datepicker {
+    display: none;
+    width: max-content;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border: 1px solid $color-light-grey-1;
+    border-radius: 6px;
+    background-color: $color-white;
+    z-index: 1001;
+
+    &--active {
+        display: block;
+    }
+
+    &-container {
+        display: flex;
+        gap: 6rem;
+        padding: 2rem 1.6rem 1.6rem 1.6rem;
+
+        @include respond(tab-port) {
+            gap: 2rem;
+        }
+
+        @include respond(phone) {
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+
+    &-left,
+    &-right {
+        width: 100%;
+    }
+
+    &-header {
+        margin-bottom: 1.7rem;
+
+        position: relative;
+    }
+
+    &__date {
+        text-align: center;
+        @include typography(1.4rem, 500, 1.5);
+    }
+
+    &__btn {
+        position: absolute;
+        top: 50%;
+
+        &--prev {
+            left: 0;
+            transform: translate(0, -50%);
+        }
+
+        &--next {
+            right: 0;
+            transform: translate(0, -50%);
+        }
+    }
+
+    &__table {
+        border-collapse: collapse;
+        text-align: center;
+
+        &-header__item {
+            @include typography(1.3rem, 500, 1.4);
+            color: $color-dark-grey-3;
+            text-align: center;
+            width: 4.4rem;
+        }
+
+        &-body{
+            &::before {
+                content: "-";
+                display: block;
+                line-height: 6px;
+                color: transparent;
+            }
+
+            &__item {
+                height: 4.4rem;
+                border-radius: 6px;
+                @include typography(1.4rem, 400, 1.5);
+
+                transition: all 0.3s ease;
+
+                &:hover:not(&--disabled) {
+                    cursor: pointer;
+                    background-color: $color-light-grey-3;
+                    color: $color-black;
+                }
+            }
+        }
+    }
+
+    &__pick {
+        &-start,
+        &-end {
+            color: $color-white;
+            background-color: $color-coral;
+        }
+
+        &-line {
+            background-color: rgba($color-coral, .15);
+            border-radius: 0;
+            &--start {
+                border-top-left-radius: 6px;
+                border-bottom-left-radius: 6px;
+            }
+            
+            &--end {
+                border-top-right-radius: 6px;
+                border-bottom-right-radius: 6px;
+            }
+        }
+
+        &-busy {
+            background-color: $color-light-grey-2;
+        }
+    }
+}

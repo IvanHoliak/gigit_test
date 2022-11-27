@@ -1,0 +1,76 @@
+.form-cta {
+    
+    &__box:not(:last-child) {
+        margin-bottom: 3.2rem;
+    }
+
+    &__box-label {
+        display: inline-block;
+        margin-bottom: 1.2rem;
+        @include typography(1.4rem, 500, 1.5);
+    }
+
+    &__btns {
+        margin-top: 5.6rem;
+    }
+}
+
+.form-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+
+    .input-box:nth-child(1),
+    .input-box:nth-child(2),
+    .input-box:nth-child(3) {
+        width: 24.4rem;
+    }
+
+    .input-box:nth-child(4) {
+        width: 27.2rem;
+    }
+
+    @include respond(tab-land) {
+        display: block;
+        &::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+        .input-box {
+            display: inline-block;
+            width: 49% !important;
+        }
+
+        .input-box:nth-child(1),
+        .input-box:nth-child(3) {
+            float: left;
+        }
+
+        .input-box:nth-child(2),
+        .input-box:nth-child(4) {
+            float: right;
+        }
+
+        .input-box:nth-child(3),
+        .input-box:nth-child(4) {
+            margin-top: 1rem;
+        }
+
+        .new-invoice__btn {
+            float: left;
+            margin-top: 1rem;
+        }
+    }
+
+    @include respond(phone) {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        .input-box {
+            float: none !important;
+            width: 100% !important;
+            margin: 0 !important;
+        }
+    }
+}

@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Gigit &mdash; Invoices</title>
+    </head>
+    <body>
+        <div class="grid col-2">
+            <nav class="navigation">
+                <header class="header">
+                    <a href="#" class="logo">
+                        <img class="logo-img" src="assets/img/logo-short.png" alt="Logo Gigit" />
+                    </a>
+                </header>
+                <ul class="navigation-list">
+                    <li class="navigation-list__item">
+                        <a href="./calendar.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./muso.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-music" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./favorite-artists.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-favorites-default" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./chat-paid.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-messages" />
+                            </svg>
+                            <p class="navigation-list__notif">1</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./invoices.html" class="navigation-list__link navigation-list__link--active">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-file_invoice" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="#" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-bell" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./profile-venue-empty.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-user" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="#" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-arrow-bar-right" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="navigation__mob">
+                <header class="header">
+                    <a href="#" class="logo">
+                        <img class="logo-img" src="assets/img/logo-full.png" alt="Logo Gigit" />
+                    </a>
+                </header>
+                <ul class="navigation-list">
+                    <li class="navigation-list__item">
+                        <a href="./calendar.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" />
+                            </svg>
+                            <p class="navigation-list__text">Calendar</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./muso.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-music" />
+                            </svg>
+                            <p class="navigation-list__text">Browse</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./favorite-artists.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-favorites-default" />
+                            </svg>
+                            <p class="navigation-list__text">Favorites</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./chat-paid.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-messages" />
+                            </svg>
+                            <p class="navigation-list__notif">1</p>
+                            <p class="navigation-list__text">Chat</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./invoices.html" class="navigation-list__link navigation-list__link--active">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-file_invoice" />
+                            </svg>
+                            <p class="navigation-list__text">Invoices</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="#" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-bell" />
+                            </svg>
+                            <p class="navigation-list__text">Notification</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./profile-venue-empty.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-user" />
+                            </svg>
+                            <p class="navigation-list__text">Profile</p>
+                        </a>
+                    </li>
+                </ul>
+                <button class="btn navigation__mob__burger-menu">
+                    <div class="line"></div>
+                </button>
+            </nav>
+            <main class="content">
+                <header class="header">
+                    <h1 class="heading-primary">Invoices</h1>
+                </header>
+                <section class="invoices-content">
+                    <form action="#" class="form-filter u-margin-bottom-medium-4">
+                        <div class="input-box">
+                            <input
+                                type="text"
+                                class="input input-dropdown"
+                                data-datalist="clients-list"
+                                placeholder="All clients" 
+                                id="input-clients"    
+                            />
+                            <ul class="datalist clients-list">
+                                <li data-value="all" class="datalist-item">All clients</li>
+                                <li
+                                    data-value="Crossfield's Pub"
+                                    title="Crossfield's Pub"
+                                    class="datalist-item">
+                                    Crossfield's Pub
+                                </li>
+                                <li
+                                    data-value="Ned Kelly's Bar"
+                                    title="Ned Kelly's Bar"
+                                    class="datalist-item">
+                                    Ned Kelly's Bar
+                                </li>
+                                <li
+                                    data-value="The Great Northern Hotel"
+                                    title="The Great Northern Hotel"
+                                    class="datalist-item">
+                                    The Great Northern Hotel
+                                </li>
+                                <li
+                                    data-value="The Rum Diary Bar"
+                                    title="The Rum Diary Bar"
+                                    class="datalist-item">
+                                    The Rum Diary Bar
+                                </li>
+                                <li
+                                    data-value="The White Horse Tavern"
+                                    title="The White Horse Tavern"
+                                    class="datalist-item">
+                                    The White Horse Tavern
+                                </li>
+                                <li
+                                    data-value="Home Sweet Home"
+                                    title="Home Sweet Home"
+                                    class="datalist-item">
+                                    Home Sweet Home
+                                </li>
+                                <li
+                                    data-value="Double Down Saloon"
+                                    title="Double Down Saloon"
+                                    class="datalist-item">
+                                    Double Down Saloon
+                                </li>
+                                <li data-value="Lutze Bar" title="Lutze Bar" class="datalist-item">
+                                    Lutze Bar
+                                </li>
+                                <li
+                                    data-value="McSorely’s Old Ale House"
+                                    title="McSorely’s Old Ale House"
+                                    class="datalist-item">
+                                    McSorely’s Old Ale House
+                                </li>
+                                <li
+                                    data-value="Jeremy's Ale House"
+                                    title="Jeremy's Ale House"
+                                    class="datalist-item">
+                                    Jeremy's Ale House
+                                </li>
+                            </ul>
+                            <label for="input-clients" class="btn__input btn__input--down">
+                                <svg class="icon">
+                                    <use
+                                        xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-down" />
+                                </svg>
+                            </label>
+                            <label for="input-clients" class="btn__input btn__input--up">
+                                <svg class="icon">
+                                    <use
+                                        xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-up" />
+                                </svg>
+                            </label>
+                            <button class="btn__input btn__input--remove">
+                                <svg class="icon">
+                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-close" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="input-box">
+                            <input
+                                type="text"
+                                class="input input-dropdown"
+                                data-datalist="statuses-list"
+                                placeholder="All statuses" 
+                                id="input-statuses"    
+                            />
+                            <ul class="datalist statuses-list">
+                                <li data-value="all" title="All statuses" class="datalist-item">
+                                    All statuses
+                                </li>
+                                <li data-value="Due soon" title="Due soon" class="datalist-item">
+                                    Due soon
+                                </li>
+                                <li data-value="Paid" title="Paid" class="datalist-item">Paid</li>
+                                <li data-value="Declined" title="Declined" class="datalist-item">
+                                    Declined
+                                </li>
+                            </ul>
+                            <label for="input-statuses" class="btn__input btn__input--down">
+                                <svg class="icon">
+                                    <use
+                                        xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-down" />
+                                </svg>
+                            </label>
+                            <label for="input-statuses" class="btn__input btn__input--up">
+                                <svg class="icon">
+                                    <use
+                                        xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-up" />
+                                </svg>
+                            </label>
+                            <button class="btn__input btn__input--remove">
+                                <svg class="icon">
+                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-close" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="input-box">
+                            <input class="input input__datepick" type="text" placeholder="All time" type="text" readonly="readonly" id="input-datepick"/>
+                            <label for="input-datepick" class="btn__input">
+                                <svg class="icon">
+                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" />
+                                </svg>
+                            </label>
+                            <div class="datepicker">
+                                <div class="datepicker-container">
+                                    <div class="datepicker-left">
+                                        <div class="datepicker-header">
+                                            <button class="btn__circle datepicker__btn datepicker__btn--prev">
+                                                <svg class="icon">
+                                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-left" />
+                                                </svg>
+                                            </button>
+                                            <p class="datepicker__date">September 2021</p>
+                                        </div>
+                                        <table class="datepicker__table">
+                                            <thead class="datepicker__table-header">
+                                                <tr class="datepicker__table-header__row">
+                                                    <td class="datepicker__table-header__item">Mo</td>
+                                                    <td class="datepicker__table-header__item">Tu</td>
+                                                    <td class="datepicker__table-header__item">We</td>
+                                                    <td class="datepicker__table-header__item">Th</td>
+                                                    <td class="datepicker__table-header__item">Fr</td>
+                                                    <td class="datepicker__table-header__item">Sa</td>
+                                                    <td class="datepicker__table-header__item">Su</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="datepicker__table-body">
+                                                <tr class="datepicker__table-body__row">
+                                                </tr>
+                                                <tr class="datepicker__table-body__row">
+                                                </tr>
+                                                <tr class="datepicker__table-body__row">
+                                                </tr>
+                                                <tr class="datepicker__table-body__row">
+                                                </tr>
+                                                <tr class="datepicker__table-body__row">
+                                                </tr>
+                                                <tr class="datepicker__table-body__row">
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="datepicker-right">
+                                        <div class="datepicker-header">
+                                            <button class="btn__circle datepicker__btn datepicker__btn--next">
+                                                <svg class="icon">
+                                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-right" />
+                                                </svg>
+                                            </button>
+                                            <p class="datepicker__date">October 2021</p>
+                                        </div>
+                                        <table class="datepicker__table">
+                                            <thead class="datepicker__table-header">
+                                                <tr class="datepicker__table-header__row">
+                                                    <td class="datepicker__table-header__item">Mo</td>
+                                                    <td class="datepicker__table-header__item">Tu</td>
+                                                    <td class="datepicker__table-header__item">We</td>
+                                                    <td class="datepicker__table-header__item">Th</td>
+                                                    <td class="datepicker__table-header__item">Fr</td>
+                                                    <td class="datepicker__table-header__item">Sa</td>
+                                                    <td class="datepicker__table-header__item">Su</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="datepicker__table-body">
+                                                <tr class="datepicker__table-body__row">
+                                                </tr>
+                                                <tr class="datepicker__table-body__row">
+                                                </tr>
+                                                <tr class="datepicker__table-body__row">
+                                                </tr>
+                                                <tr class="datepicker__table-body__row">
+                                                </tr>
+                                                <tr class="datepicker__table-body__row">
+                                                </tr>
+                                                <tr class="datepicker__table-body__row">
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" class="input" placeholder="Search" id="input-search"/>
+                            <label for="input-search" class="btn__input btn__input--search">
+                                <svg class="icon">
+                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-search" />
+                                </svg>
+                            </label>
+                        </div>
+                        <div class="new-invoice__btn">
+                            <a class="btn btn--big btn__primary">New Invoice</a>
+                        </div>
+                    </form>
+
+                    <table class="table table-invoices u-margin-bottom-medium-2">
+                        <thead>
+                            <tr>
+                                <td>
+                                    <button class="table__sort-btn">
+                                        Number
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-caret-down" />
+                                        </svg>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="table__sort-btn">
+                                        Client
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-caret-down" />
+                                        </svg>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="table__sort-btn">
+                                        Description
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-caret-down" />
+                                        </svg>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="table__sort-btn">
+                                        Status
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-caret-down" />
+                                        </svg>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="table__sort-btn">
+                                        Date Issued
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-caret-down" />
+                                        </svg>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="table__sort-btn">
+                                        Date paid
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-caret-down" />
+                                        </svg>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="table__sort-btn">
+                                        Amount
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-caret-down" />
+                                        </svg>
+                                    </button>
+                                </td>
+                                <td class="table__sort-empty"></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>00065</td>
+                                <td>The Rum Diary Bar</td>
+                                <td>Live Music Monthly Venue Services</td>
+                                <td class="invoices__invoice__status invoices__invoice__status--due">Due in 14 days</td>
+                                <td>Jun 2, 2022</td>
+                                <td>&mdash;</td>
+                                <td>$170.00</td>
+                                <td>
+                                    <button class="btn__circle table__show-popup">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-dots" />
+                                        </svg>
+                                    </button>
+                                    <div class="table__row-popup">
+                                        <ul class="table__row-popup__list">
+                                            <li class="table__row-popup__item">
+                                                <svg class="icon">
+                                                    <use
+                                                        xlink:href="assets/sprites/sprite-icon.svg#icon-messages" />
+                                                </svg>
+                                                <a
+                                                    href="#"
+                                                    class="btn-tertiary table__row-popup__link">
+                                                    View chat with muso
+                                                </a>
+                                            </li>
+                                            <li class="table__row-popup__item">
+                                                <svg class="icon">
+                                                    <use
+                                                        xlink:href="assets/sprites/sprite-icon.svg#icon-file_invoice" />
+                                                </svg>
+                                                <a
+                                                    href="#"
+                                                    class="btn-tertiary table__row-popup__link">
+                                                    View Invoice
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>00064</td>
+                                <td>The Great Northern Hotel</td>
+                                <td>Gigit Entertaiment Services</td>
+                                <td class="invoices__invoice__status invoices__invoice__status--due">Due in 14 days</td>
+                                <td>Jun 2, 2022</td>
+                                <td>&mdash;</td>
+                                <td>$450.00</td>
+                                <td>
+                                    <button class="btn__circle table__show-popup">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-dots" />
+                                        </svg>
+                                    </button>
+                                    <div class="table__row-popup">
+                                        <ul class="table__row-popup__list">
+                                            <li class="table__row-popup__item">
+                                                <svg class="icon">
+                                                    <use
+                                                        xlink:href="assets/sprites/sprite-icon.svg#icon-messages" />
+                                                </svg>
+                                                <a
+                                                    href="#"
+                                                    class="btn-tertiary table__row-popup__link">
+                                                    View chat with muso
+                                                </a>
+                                            </li>
+                                            <li class="table__row-popup__item">
+                                                <svg class="icon">
+                                                    <use
+                                                        xlink:href="assets/sprites/sprite-icon.svg#icon-file_invoice" />
+                                                </svg>
+                                                <a
+                                                    href="#"
+                                                    class="btn-tertiary table__row-popup__link">
+                                                    View Invoice
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>00063</td>
+                                <td>The Great Northern Hotel</td>
+                                <td>Gigit Entertaiment Services</td>
+                                <td class="invoices__invoice__status invoices__invoice__status--paid">Paid May 12</td>
+                                <td>May 4, 2022</td>
+                                <td>May 12, 2022</td>
+                                <td>$450.00</td>
+                                <td>
+                                    <button class="btn__circle table__show-popup">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-dots" />
+                                        </svg>
+                                    </button>
+                                    <div class="table__row-popup">
+                                        <ul class="table__row-popup__list">
+                                            <li class="table__row-popup__item">
+                                                <svg class="icon">
+                                                    <use
+                                                        xlink:href="assets/sprites/sprite-icon.svg#icon-messages" />
+                                                </svg>
+                                                <a
+                                                    href="#"
+                                                    class="btn-tertiary table__row-popup__link">
+                                                    View chat with muso
+                                                </a>
+                                            </li>
+                                            <li class="table__row-popup__item">
+                                                <svg class="icon">
+                                                    <use
+                                                        xlink:href="assets/sprites/sprite-icon.svg#icon-file_invoice" />
+                                                </svg>
+                                                <a
+                                                    href="#"
+                                                    class="btn-tertiary table__row-popup__link">
+                                                    View Invoice
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>00062</td>
+                                <td>The Rum Diary Bar</td>
+                                <td>Live Music Monthly Venue Services</td>
+                                <td class="invoices__invoice__status invoices__invoice__status--paid">Paid May 20</td>
+                                <td>May 4, 2022</td>
+                                <td>May 20, 2022</td>
+                                <td>$310.00</td>
+                                <td>
+                                    <button class="btn__circle table__show-popup">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-dots" />
+                                        </svg>
+                                    </button>
+                                    <div class="table__row-popup">
+                                        <ul class="table__row-popup__list">
+                                            <li class="table__row-popup__item">
+                                                <svg class="icon">
+                                                    <use
+                                                        xlink:href="assets/sprites/sprite-icon.svg#icon-messages" />
+                                                </svg>
+                                                <a
+                                                    href="#"
+                                                    class="btn-tertiary table__row-popup__link">
+                                                    View chat with muso
+                                                </a>
+                                            </li>
+                                            <li class="table__row-popup__item">
+                                                <svg class="icon">
+                                                    <use
+                                                        xlink:href="assets/sprites/sprite-icon.svg#icon-file_invoice" />
+                                                </svg>
+                                                <a
+                                                    href="#"
+                                                    class="btn-tertiary table__row-popup__link">
+                                                    View Invoice
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>00061</td>
+                                <td>The Great Northern Hotel</td>
+                                <td>The Great Northern Hotel</td>
+                                <td class="invoices__invoice__status invoices__invoice__status--paid">Paid Apr 20</td>
+                                <td>Apr 1, 2022</td>
+                                <td>Apr 1, 2022</td>
+                                <td>$140.00</td>
+                                <td>
+                                    <button class="btn__circle table__show-popup">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-dots" />
+                                        </svg>
+                                    </button>
+                                    <div class="table__row-popup">
+                                        <ul class="table__row-popup__list">
+                                            <li class="table__row-popup__item">
+                                                <svg class="icon">
+                                                    <use
+                                                        xlink:href="assets/sprites/sprite-icon.svg#icon-messages" />
+                                                </svg>
+                                                <a
+                                                    href="#"
+                                                    class="btn-tertiary table__row-popup__link">
+                                                    View chat with muso
+                                                </a>
+                                            </li>
+                                            <li class="table__row-popup__item">
+                                                <svg class="icon">
+                                                    <use
+                                                        xlink:href="assets/sprites/sprite-icon.svg#icon-file_invoice" />
+                                                </svg>
+                                                <a
+                                                    href="#"
+                                                    class="btn-tertiary table__row-popup__link">
+                                                    View Invoice
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="invoices__invoice--declined">
+                                <td>00060</td>
+                                <td>The Great Northern Hotel</td>
+                                <td>Gigit Entertaiment Services</td>
+                                <td class="invoices__invoice__status invoices__invoice__status--declined">Declined Apr 7</td>
+                                <td>Mar 29, 2022</td>
+                                <td>&mdash;</td>
+                                <td>$280.00</td>
+                                <td>
+                                    <button class="btn__circle table__show-popup">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-dots" />
+                                        </svg>
+                                    </button>
+                                    <div class="table__row-popup">
+                                        <ul class="table__row-popup__list">
+                                            <li class="table__row-popup__item">
+                                                <svg class="icon">
+                                                    <use
+                                                        xlink:href="assets/sprites/sprite-icon.svg#icon-messages" />
+                                                </svg>
+                                                <a
+                                                    href="#"
+                                                    class="btn-tertiary table__row-popup__link">
+                                                    View chat with muso
+                                                </a>
+                                            </li>
+                                            <li class="table__row-popup__item">
+                                                <svg class="icon">
+                                                    <use
+                                                        xlink:href="assets/sprites/sprite-icon.svg#icon-file_invoice" />
+                                                </svg>
+                                                <a
+                                                    href="#"
+                                                    class="btn-tertiary table__row-popup__link">
+                                                    View Invoice
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>00059</td>
+                                <td>The Rum Diary Bar</td>
+                                <td>Live Music Monthly Venue Services</td>
+                                <td class="invoices__invoice__status invoices__invoice__status--paid">Paid Apr 21</td>
+                                <td>Mar 21, 2022</td>
+                                <td>Mar 21, 2022</td>
+                                <td>$280.00</td>
+                                <td>
+                                    <button class="btn__circle table__show-popup">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-dots" />
+                                        </svg>
+                                    </button>
+                                    <div class="table__row-popup">
+                                        <ul class="table__row-popup__list">
+                                            <li class="table__row-popup__item">
+                                                <svg class="icon">
+                                                    <use
+                                                        xlink:href="assets/sprites/sprite-icon.svg#icon-messages" />
+                                                </svg>
+                                                <a
+                                                    href="#"
+                                                    class="btn-tertiary table__row-popup__link">
+                                                    View chat with muso
+                                                </a>
+                                            </li>
+                                            <li class="table__row-popup__item">
+                                                <svg class="icon">
+                                                    <use
+                                                        xlink:href="assets/sprites/sprite-icon.svg#icon-file_invoice" />
+                                                </svg>
+                                                <a
+                                                    href="#"
+                                                    class="btn-tertiary table__row-popup__link">
+                                                    View Invoice
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>00058</td>
+                                <td>The Great Northern Hotel</td>
+                                <td>Gigit Entertaiment Services</td>
+                                <td class="invoices__invoice__status invoices__invoice__status--paid">Paid Mar 31</td>
+                                <td>Mar 17, 2022</td>
+                                <td>Mar 31, 2022</td>
+                                <td>$280.00</td>
+                                <td>
+                                    <button class="btn__circle table__show-popup">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-dots" />
+                                        </svg>
+                                    </button>
+                                    <div class="table__row-popup">
+                                        <ul class="table__row-popup__list">
+                                            <li class="table__row-popup__item">
+                                                <svg class="icon">
+                                                    <use
+                                                        xlink:href="assets/sprites/sprite-icon.svg#icon-messages" />
+                                                </svg>
+                                                <a
+                                                    href="#"
+                                                    class="btn-tertiary table__row-popup__link">
+                                                    View chat with muso
+                                                </a>
+                                            </li>
+                                            <li class="table__row-popup__item">
+                                                <svg class="icon">
+                                                    <use
+                                                        xlink:href="assets/sprites/sprite-icon.svg#icon-file_invoice" />
+                                                </svg>
+                                                <a
+                                                    href="#"
+                                                    class="btn-tertiary table__row-popup__link">
+                                                    View Invoice
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>00057</td>
+                                <td>The Great Northern Hotel</td>
+                                <td>Gigit Entertaiment Services</td>
+                                <td class="invoices__invoice__status invoices__invoice__status--paid">Paid Mar 29</td>
+                                <td>Mar 16, 2022</td>
+                                <td>Mar 29, 2022</td>
+                                <td>$170.00</td>
+                                <td>
+                                    <button class="btn__circle table__show-popup">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-dots" />
+                                        </svg>
+                                    </button>
+                                    <div class="table__row-popup">
+                                        <ul class="table__row-popup__list">
+                                            <li class="table__row-popup__item">
+                                                <svg class="icon">
+                                                    <use
+                                                        xlink:href="assets/sprites/sprite-icon.svg#icon-messages" />
+                                                </svg>
+                                                <a
+                                                    href="#"
+                                                    class="btn-tertiary table__row-popup__link">
+                                                    View chat with muso
+                                                </a>
+                                            </li>
+                                            <li class="table__row-popup__item">
+                                                <svg class="icon">
+                                                    <use
+                                                        xlink:href="assets/sprites/sprite-icon.svg#icon-file_invoice" />
+                                                </svg>
+                                                <a
+                                                    href="#"
+                                                    class="btn-tertiary table__row-popup__link">
+                                                    View Invoice
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>00056</td>
+                                <td>The Great Northern Hotel</td>
+                                <td>Gigit Entertaiment Services</td>
+                                <td class="invoices__invoice__status invoices__invoice__status--paid">Paid Mar 28</td>
+                                <td>Mar 15, 2022</td>
+                                <td>Mar 28, 2022</td>
+                                <td>$310.00</td>
+                                <td>
+                                    <button class="btn__circle table__show-popup">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-dots" />
+                                        </svg>
+                                    </button>
+                                    <div class="table__row-popup">
+                                        <ul class="table__row-popup__list">
+                                            <li class="table__row-popup__item">
+                                                <svg class="icon">
+                                                    <use
+                                                        xlink:href="assets/sprites/sprite-icon.svg#icon-messages" />
+                                                </svg>
+                                                <a
+                                                    href="#"
+                                                    class="btn-tertiary table__row-popup__link">
+                                                    View chat with muso
+                                                </a>
+                                            </li>
+                                            <li class="table__row-popup__item">
+                                                <svg class="icon">
+                                                    <use
+                                                        xlink:href="assets/sprites/sprite-icon.svg#icon-file_invoice" />
+                                                </svg>
+                                                <a
+                                                    href="#"
+                                                    class="btn-tertiary table__row-popup__link">
+                                                    View Invoice
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="pagination">
+                        <div class="pagination__wrapper">
+                            <ul class="pagination__list">
+                                <li class="pagination__item pagination__item--active">
+                                    <a href="#" class="pagination__link">1</a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a href="#" class="pagination__link">2</a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a href="#" class="pagination__link">3</a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a href="#" class="pagination__link">4</a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a href="#" class="pagination__link">5</a>
+                                </li>
+
+                                <li class="pagination__item pagination__item--dots">...</li>
+                                <li class="pagination__item">
+                                    <a href="#" class="pagination__link">10</a>
+                                </li>
+                            </ul>
+
+                            <button class="pagination__control pagination__control--prev">
+                                <svg class="icon">
+                                    <use
+                                        xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-left" />
+                                </svg>
+                            </button>
+                            <button class="pagination__control pagination__control--next">
+                                <svg class="icon">
+                                    <use
+                                        xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-right" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <script type="module" src="js/main.js"></script>
+        <script type="module" src="js/calendar.js"></script>
+    </body>
+</html>

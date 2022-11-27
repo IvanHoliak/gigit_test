@@ -1,0 +1,40 @@
+.new-artists {
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include respond(tab-land) {
+            width: 100%;
+            justify-content: flex-start;
+            gap: 3rem;
+            overflow-x: auto;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include respond(tab-land) {
+            flex: 1;
+
+            p {
+                white-space: nowrap;
+            }
+        }
+    }
+
+    &__img {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        margin-bottom: 1.2rem;
+    }
+}

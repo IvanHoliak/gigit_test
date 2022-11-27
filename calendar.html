@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Gigit &mdash; Calendar</title>
+    </head>
+    <body>
+        <div class="grid col-2">
+            <nav class="navigation">
+                <header class="header">
+                    <a href="#" class="logo">
+                        <img class="logo-img" src="assets/img/logo-short.png" alt="Logo Gigit" />
+                    </a>
+                </header>
+                <ul class="navigation-list">
+                    <li class="navigation-list__item">
+                        <a
+                            href="./calendar.html"
+                            class="navigation-list__link navigation-list__link--active">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./muso.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-music" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./favorite-artists.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-favorites-default" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./chat-paid.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-messages" />
+                            </svg>
+                            <p class="navigation-list__notif">1</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./invoices.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-file_invoice" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="#" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-bell" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./profile-venue-empty.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-user" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="#" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-arrow-bar-right" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="navigation__mob">
+                <header class="header">
+                    <a href="#" class="logo">
+                        <img class="logo-img" src="assets/img/logo-full.png" alt="Logo Gigit" />
+                    </a>
+                </header>
+                <ul class="navigation-list">
+                    <li class="navigation-list__item">
+                        <a href="./calendar.html" class="navigation-list__link navigation-list__link--active">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" />
+                            </svg>
+                            <p class="navigation-list__text">Calendar</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a
+                            href="./muso.html"
+                            class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-music" />
+                            </svg>
+                            <p class="navigation-list__text">Browse</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./favorite-artists.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-favorites-default" />
+                            </svg>
+                            <p class="navigation-list__text">Favorites</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./chat-paid.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-messages" />
+                            </svg>
+                            <p class="navigation-list__notif">1</p>
+                            <p class="navigation-list__text">Chat</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./invoices.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-file_invoice" />
+                            </svg>
+                            <p class="navigation-list__text">Invoices</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="#" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-bell" />
+                            </svg>
+                            <p class="navigation-list__text">Notification</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./profile-venue-empty.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-user" />
+                            </svg>
+                            <p class="navigation-list__text">Profile</p>
+                        </a>
+                    </li>
+                </ul>
+                <button class="btn navigation__mob__burger-menu">
+                    <div class="line"></div>
+                </button>
+            </nav>
+            <main class="content">
+                <header class="header u-border-b-none">
+                    <h1 class="heading-primary">Book a gig with Nirvana</h1>
+                    <div class="input-data">
+                        <button class="btn btn__circle btn__date-prev">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-left" />
+                            </svg>
+                        </button>
+                        <p class="artist-title">June, 2022</p>
+                        <button class="btn btn__circle btn__date-next">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-right" />
+                            </svg>
+                        </button>
+                    </div>
+                </header>
+                <section class="calendar-content">
+                    <div class="calendar__header calendar__mob">
+                        <button class="btn btn_show_calendar calendar__header-cell" data-day="mon">
+                            MON
+                        </button>
+                        <div id="mon" class="calendar__accordion">
+                            <div class="calendar__body-cell calendar__another-month">
+                                <h3 class="heading-tertiary">30</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">6</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">13</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">20</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">27</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn_show_calendar calendar__header-cell" data-day="tue">
+                            TUE
+                        </button>
+                        <div id="tue" class="calendar__accordion">
+                            <div class="calendar__body-cell calendar__another-month">
+                                <h3 class="heading-tertiary">31</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">7</h3>
+                                <div class="calendar__desc">
+                                    <div class="calendar__date-available">
+                                        <p class="calendar__cell-head">Available</p>
+                                        <p class="calendar__cell-body">8:00 pm – 11:00 pm</p>
+                                    </div>
+                                </div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">14</h3>
+                                <div class="calendar__desc calendar__desc--many">
+                                    <div
+                                        class="calendar__date-available calendar__date-available--busy calendar__date-available--many">
+                                        <p class="calendar__cell-head">Bi-2 •</p>
+                                        <p class="calendar__cell-body">9:00 pm</p>
+                                    </div>
+                                    <div
+                                        class="calendar__date-available calendar__date-available--busy calendar__date-available--many">
+                                        <p class="calendar__cell-head">Staind •</p>
+                                        <p class="calendar__cell-body">11:00 pm</p>
+                                    </div>
+                                </div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">21</h3>
+                                <div class="calendar__desc">
+                                    <div class="calendar__date-available">
+                                        <p class="calendar__cell-head">Available</p>
+                                        <p class="calendar__cell-body">8:00 pm – 11:00 pm</p>
+                                    </div>
+                                </div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">28</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn_show_calendar calendar__header-cell" data-day="wed">
+                            WED
+                        </button>
+                        <div id="wed" class="calendar__accordion">
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">1</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">8</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">15</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">22</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">29</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn_show_calendar calendar__header-cell" data-day="thu">
+                            THU
+                        </button>
+                        <div id="thu" class="calendar__accordion">
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">2</h3>
+                                <div class="calendar__desc">
+                                    <div class="calendar__date-available">
+                                        <p class="calendar__cell-head">Available</p>
+                                        <p class="calendar__cell-body">8:00 pm – 11:00 pm</p>
+                                    </div>
+                                </div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">9</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div
+                                class="calendar__body-cell calendar__current-month calendar__current-day">
+                                <h3 class="heading-tertiary">16</h3>
+                                <div class="calendar__desc">
+                                    <div class="calendar__date-available">
+                                        <p class="calendar__cell-head">Available</p>
+                                        <p class="calendar__cell-body">8:00 pm – 11:00 pm</p>
+                                    </div>
+                                </div>
+                                <div class="calendar__icons">
+                                    <svg class="icon">
+                                        <use
+                                            xlink:href="assets/sprites/sprite-icon.svg#icon-calendar-plus" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">23</h3>
+                                <div class="calendar__desc">
+                                    <div
+                                        class="calendar__date-available calendar__date-available--busy calendar__date-available--one">
+                                        <p class="calendar__cell-head">Available</p>
+                                        <p class="calendar__cell-body">8:00 pm – 11:00 pm</p>
+                                    </div>
+                                </div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">30</h3>
+                                <div class="calendar__desc">
+                                    <div class="calendar__date-available">
+                                        <p class="calendar__cell-head">Available</p>
+                                        <p class="calendar__cell-body">8:00 pm – 11:00 pm</p>
+                                    </div>
+                                </div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn_show_calendar calendar__header-cell" data-day="fri">
+                            FRI
+                        </button>
+                        <div id="fri" class="calendar__accordion">
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">3</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">10</h3>
+                                <div class="calendar__desc">
+                                    <div
+                                        class="calendar__date-available calendar__date-available--busy calendar__date-available--one">
+                                        <p class="calendar__cell-head">Available</p>
+                                        <p class="calendar__cell-body">8:00 pm – 11:00 pm</p>
+                                    </div>
+                                </div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">17</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">24</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__another-month">
+                                <h3 class="heading-tertiary">1</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn_show_calendar calendar__header-cell" data-day="sat">
+                            SAT
+                        </button>
+                        <div id="sat" class="calendar__accordion">
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">4</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">11</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">18</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">25</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__another-month">
+                                <h3 class="heading-tertiary">2</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn_show_calendar calendar__header-cell" data-day="sun">
+                            SUN
+                        </button>
+                        <div id="sun" class="calendar__accordion">
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">5</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">12</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">19</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__current-month">
+                                <h3 class="heading-tertiary">26</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                            <div class="calendar__body-cell calendar__another-month">
+                                <h3 class="heading-tertiary">3</h3>
+                                <div class="calendar__desc"></div>
+                                <div class="calendar__icons"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid col-7 calendar__header">
+                        <div class="calendar__header-cell">MON</div>
+                        <div class="calendar__header-cell">TUE</div>
+                        <div class="calendar__header-cell">WED</div>
+                        <div class="calendar__header-cell">THU</div>
+                        <div class="calendar__header-cell">FRI</div>
+                        <div class="calendar__header-cell">SAT</div>
+                        <div class="calendar__header-cell">SUN</div>
+                    </div>
+                    <div class="grid col-7 row-5 calendar__body">
+                        <div class="calendar__body-cell calendar__another-month">
+                            <h3 class="heading-tertiary">30</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__another-month">
+                            <h3 class="heading-tertiary">31</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">1</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">2</h3>
+                            <div class="calendar__desc">
+                                <div class="calendar__date-available">
+                                    <p class="calendar__cell-head">Available</p>
+                                    <p class="calendar__cell-body">8:00 pm – 11:00 pm</p>
+                                </div>
+                            </div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">3</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">4</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">5</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">6</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">7</h3>
+                            <div class="calendar__desc">
+                                <div class="calendar__date-available">
+                                    <p class="calendar__cell-head">Available</p>
+                                    <p class="calendar__cell-body">8:00 pm – 11:00 pm</p>
+                                </div>
+                            </div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">8</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">9</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">10</h3>
+                            <div class="calendar__desc">
+                                <div
+                                    class="calendar__date-available calendar__date-available--busy calendar__date-available--one">
+                                    <p class="calendar__cell-head">Available</p>
+                                    <p class="calendar__cell-body">8:00 pm – 11:00 pm</p>
+                                </div>
+                            </div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">11</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">12</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">13</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">14</h3>
+                            <div class="calendar__desc calendar__desc--many">
+                                <div
+                                    class="calendar__date-available calendar__date-available--busy calendar__date-available--many">
+                                    <p class="calendar__cell-head">Bi-2 •</p>
+                                    <p class="calendar__cell-body">9:00 pm</p>
+                                </div>
+                                <div
+                                    class="calendar__date-available calendar__date-available--busy calendar__date-available--many">
+                                    <p class="calendar__cell-head">Staind •</p>
+                                    <p class="calendar__cell-body">11:00 pm</p>
+                                </div>
+                            </div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">15</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div
+                            class="calendar__body-cell calendar__current-month calendar__current-day">
+                            <h3 class="heading-tertiary">16</h3>
+                            <div class="calendar__desc">
+                                <div class="calendar__date-available">
+                                    <p class="calendar__cell-head">Available</p>
+                                    <p class="calendar__cell-body">8:00 pm – 11:00 pm</p>
+                                </div>
+                            </div>
+                            <div class="calendar__icons">
+                                <svg class="icon">
+                                    <use
+                                        xlink:href="assets/sprites/sprite-icon.svg#icon-calendar-plus" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">17</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">18</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">19</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">20</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">21</h3>
+                            <div class="calendar__desc">
+                                <div class="calendar__date-available">
+                                    <p class="calendar__cell-head">Available</p>
+                                    <p class="calendar__cell-body">8:00 pm – 11:00 pm</p>
+                                </div>
+                            </div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">22</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">23</h3>
+                            <div class="calendar__desc">
+                                <div
+                                    class="calendar__date-available calendar__date-available--busy calendar__date-available--one">
+                                    <p class="calendar__cell-head">Available</p>
+                                    <p class="calendar__cell-body">8:00 pm – 11:00 pm</p>
+                                </div>
+                            </div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">24</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">25</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">26</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">27</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">28</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">29</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__current-month">
+                            <h3 class="heading-tertiary">30</h3>
+                            <div class="calendar__desc">
+                                <div class="calendar__date-available">
+                                    <p class="calendar__cell-head">Available</p>
+                                    <p class="calendar__cell-body">8:00 pm – 11:00 pm</p>
+                                </div>
+                            </div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__another-month">
+                            <h3 class="heading-tertiary">1</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__another-month">
+                            <h3 class="heading-tertiary">2</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                        <div class="calendar__body-cell calendar__another-month">
+                            <h3 class="heading-tertiary">3</h3>
+                            <div class="calendar__desc"></div>
+                            <div class="calendar__icons"></div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <div class="popup-wrapper">
+            <div class="popup-container">
+                <div class="popup">
+                    <button class="popup__btn-close">
+                        <svg class="icon">
+                            <use xlink:href="assets/sprites/sprite-icon.svg#icon-close"></use>
+                        </svg>
+                    </button>
+    
+                    <h1 class="heading-primary u-margin-bottom-medium-5">Book a gig</h1>
+    
+                    <div action="#" class="form-cta">
+                        <div class="form-cta__box">
+                            <label for="band" class="form-cta__box-label">Band</label>
+                            <div class="input-box">
+                                <input
+                                    type="text"
+                                    id="band"
+                                    class="input"
+                                    placeholder="Venue"
+                                    value="Venue"
+                                    required
+                                    disabled />
+                                <p class="input__side-text">$100.00/hour</p>
+                            </div>
+                        </div>
+                        <div class="form-cta__box">
+                            <label for="date" class="form-cta__box-label">Date</label>
+                            <div class="input-box">
+                                <input
+                                    type="email"
+                                    id="date"
+                                    class="input"
+                                    placeholder="Thursday, June 16"
+                                    value="Thursday, June 16"
+                                    required
+                                    disabled />
+                                <button class="btn__input btn__input--datepick" disabled>
+                                    <svg class="icon">
+                                        <use
+                                            xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-cta__box">
+                            <label for="time" class="form-cta__box-label">Time</label>
+                            <div class="input-boxes">
+                                <div class="input-box">
+                                    <input
+                                        id="time"
+                                        type="text"
+                                        class="input input-dropdown"
+                                        data-datalist="time-from-list"
+                                        placeholder="From"
+                                        value="9:00 pm" />
+                                    <ul class="datalist time-from-list">
+                                        <li data-value="9:00 pm" title="9:00 pm" class="datalist-item">
+                                            9:00 pm
+                                        </li>
+                                        <li
+                                            data-value="10:00 pm"
+                                            title="10:00 pm"
+                                            class="datalist-item">
+                                            10:00 pm
+                                        </li>
+                                        <li
+                                            data-value="11:00 pm"
+                                            title="11:00 pm"
+                                            class="datalist-item">
+                                            11:00 pm
+                                        </li>
+                                        <li
+                                            data-value="12:00 pm"
+                                            title="12:00 pm"
+                                            class="datalist-item">
+                                            12:00 pm
+                                        </li>
+                                    </ul>
+                                    <button class="btn__input btn__input--down">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-down" />
+                                        </svg>
+                                    </button>
+                                    <button class="btn__input btn__input--up">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-up" />
+                                        </svg>
+                                    </button>
+                                    <button class="btn__input btn__input--remove">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-close" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="divader">&nbsp;</div>
+                                <div class="input-box">
+                                    <input
+                                        id="time"
+                                        type="text"
+                                        class="input input-dropdown"
+                                        data-datalist="time-to-list"
+                                        placeholder="To"
+                                        value="11:00 pm" />
+                                    <ul class="datalist time-to-list">
+                                        <li data-value="9:00 pm" title="9:00 pm" class="datalist-item">
+                                            9:00 pm
+                                        </li>
+                                        <li
+                                            data-value="10:00 pm"
+                                            title="10:00 pm"
+                                            class="datalist-item">
+                                            10:00 pm
+                                        </li>
+                                        <li
+                                            data-value="11:00 pm"
+                                            title="11:00 pm"
+                                            class="datalist-item">
+                                            11:00 pm
+                                        </li>
+                                        <li
+                                            data-value="12:00 pm"
+                                            title="12:00 pm"
+                                            class="datalist-item">
+                                            12:00 pm
+                                        </li>
+                                    </ul>
+                                    <button class="btn__input btn__input--down">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-down" />
+                                        </svg>
+                                    </button>
+                                    <button class="btn__input btn__input--up">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-up" />
+                                        </svg>
+                                    </button>
+                                    <button class="btn__input btn__input--remove">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-close" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-cta__box">
+                            <label for="price" class="form-cta__box-label u-margin-bottom-smallest"
+                                >Price</label
+                            >
+                            <input
+                                type="text"
+                                id="price"
+                                class="input input__outline"
+                                value="$200"
+                                required
+                                disabled />
+                        </div>
+                        <div class="form-cta__btns">
+                            <a href="./chat.html" class="btn btn--medium btn__primary confirm_btn"
+                                >Send request</a
+                            >
+                            <buttom class="btn btn__secondary cancel_btn">Cancel</buttom>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>

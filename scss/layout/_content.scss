@@ -1,0 +1,33 @@
+.content {
+    padding: 0 4.4rem; //3.2rem
+
+    overflow: auto;
+
+    @include respond(tab-land) {
+        padding: 0 2.4rem 3.2rem !important;
+    }
+
+    @include respond(tab-port) {
+        padding: 0 1.4rem 3.2rem !important;
+    }
+
+    @include respond(phone) {
+        padding: 0 1rem 3.2rem !important;
+    }
+}
+
+.main-content {
+    padding: 0 4.4rem 3.2rem;
+}
+
+.content--empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content__empty-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

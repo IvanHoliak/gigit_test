@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Gigit &mdash; Browse</title>
+    </head>
+    <body>
+        <div class="grid col-3">
+            <nav class="navigation">
+                <header class="header">
+                    <a href="#" class="logo">
+                        <img class="logo-img" src="assets/img/logo-short.png" alt="Logo Gigit" />
+                    </a>
+                </header>
+                <ul class="navigation-list">
+                    <li class="navigation-list__item">
+                        <a href="./calendar.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./muso.html" class="navigation-list__link navigation-list__link--active">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-music" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./favorite-artists.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-favorites-default" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./chat-paid.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-messages" />
+                            </svg>
+                            <p class="navigation-list__notif">1</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./invoices.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-file_invoice" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="#" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-bell" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./profile-venue-empty.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-user" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="#" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-arrow-bar-right" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="navigation__mob">
+                <header class="header">
+                    <a href="#" class="logo">
+                        <img class="logo-img" src="assets/img/logo-full.png" alt="Logo Gigit" />
+                    </a>
+                </header>
+                <ul class="navigation-list">
+                    <li class="navigation-list__item">
+                        <a href="./calendar.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" />
+                            </svg>
+                            <p class="navigation-list__text">Calendar</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./muso.html" class="navigation-list__link navigation-list__link--active">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-music" />
+                            </svg>
+                            <p class="navigation-list__text">Browse</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./favorite-artists.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-favorites-default" />
+                            </svg>
+                            <p class="navigation-list__text">Favorites</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./chat-paid.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-messages" />
+                            </svg>
+                            <p class="navigation-list__notif">1</p>
+                            <p class="navigation-list__text">Chat</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./invoices.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-file_invoice" />
+                            </svg>
+                            <p class="navigation-list__text">Invoices</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="#" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-bell" />
+                            </svg>
+                            <p class="navigation-list__text">Notification</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./profile-venue-empty.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-user" />
+                            </svg>
+                            <p class="navigation-list__text">Profile</p>
+                        </a>
+                    </li>
+                </ul>
+                <button class="btn navigation__mob__burger-menu">
+                    <div class="line"></div>
+                </button>
+            </nav>
+            <main class="content main-content">
+                <header class="header">
+                    <h1 class="heading-primary">Browse</h1>
+                    <form action="#" class="browse-form">
+                        <div class="input-box input-box__mob">
+                            <input
+                                type="text"
+                                name="search"
+                                id="search"
+                                class="input"
+                                data-datalist="search-list"
+                                placeholder="Search venues" 
+                            />
+                            <ul class="datalist search-list">
+                                <li data-value="Linkin Park" title="Linkin Park" class="datalist-item">Linkin Park</li>
+                                <li data-value="Limp Bizkit" title="Limp Bizkit" class="datalist-item">Limp Bizkit</li>
+                                <li data-value="Little Big Town" title="Little Big Town" class="datalist-item">Little Big Town</li>
+                                <li data-value="Little Feat" title="Little Feat" class="datalist-item">Little Feat</li>
+                            </ul>
+                            <label for="search" class="btn__input">
+                                <svg class="icon">
+                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-search" />
+                                </svg>
+                            </label>
+                        </div>
+                        <div class="input-box">
+                            <input
+                                type="text"
+                                name="filter"
+                                id="filter"
+                                class="input"
+                                placeholder="View Filters" 
+                                readonly
+                            />
+                            <label for="filter" class="btn__input">
+                                <svg class="icon">
+                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-filters" />
+                                </svg>
+                            </label>
+
+                            <label for="filter">
+                                <p class="input__filter-count">
+                                    3  
+                                </p>
+                            </label>
+                        </div>
+                    </form>
+                </header>
+                <section class="browse-content main_box">
+                    <header class="browse-content__header u-margin-bottom-bigest">
+                        <div class="browse-content__header-img-box">
+                            <img
+                                src="assets/img/album-slide-1.png"
+                                alt="Album slide"
+                                class="__slide-1" />
+                            <img
+                                src="assets/img/album-slide-2.png"
+                                alt="Album slide"
+                                class="__slide-2" />
+                            <img
+                                src="assets/img/album-slide-3.png"
+                                alt="Album slide"
+                                class="__slide-3" />
+                        </div>
+                        <div class="browse-content__header-desc">
+                            <h2 class="heading-secondary u-margin-bottom-medium">
+                                More than 100+ musical groups <br />
+                                are ready to perform in your venue
+                            </h2>
+                            <p class="subheader">
+                                Use trial access to evaluate the benefits of our service
+                            </p>
+                        </div>
+                    </header>
+                    <div class="new-artists u-margin-bottom-bigest">
+                        <h2 class="heading-secondary u-margin-bottom-medium-2">New Artists</h2>
+                        <ul class="new-artists__list">
+                            <li class="new-artists__item">
+                                <img
+                                    src="assets/img/linkin-park.png"
+                                    alt="Linkin Park Logo"
+                                    class="new-artists__img" />
+                                <p class="artist-title u-margin-bottom-smallest">Linkin Park</p>
+                                <p class="artist-subtitle">Alternative</p>
+                            </li>
+                            <li class="new-artists__item">
+                                <img
+                                    src="assets/img/nirvana.png"
+                                    alt="Nirvana Logo"
+                                    class="new-artists__img" />
+                                <p class="artist-title u-margin-bottom-smallest">Nirvana</p>
+                                <p class="artist-subtitle">Grunge</p>
+                            </li>
+                            <li class="new-artists__item">
+                                <img
+                                    src="assets/img/limp-bizkit.png"
+                                    alt="Limp Bizkit Logo"
+                                    class="new-artists__img" />
+                                <p class="artist-title u-margin-bottom-smallest">Limp Bizkit</p>
+                                <p class="artist-subtitle">Nu metal</p>
+                            </li>
+                            <li class="new-artists__item">
+                                <img
+                                    src="assets/img/bi-2.png"
+                                    alt="Bi-2"
+                                    class="new-artists__img" />
+                                <p class="artist-title u-margin-bottom-smallest">Bi-2</p>
+                                <p class="artist-subtitle">Rock</p>
+                            </li>
+                            <li class="new-artists__item">
+                                <img
+                                    src="assets/img/the-who.png"
+                                    alt="The Who"
+                                    class="new-artists__img" />
+                                <p class="artist-title u-margin-bottom-smallest">The Who</p>
+                                <p class="artist-subtitle">Rock</p>
+                            </li>
+                            <li class="new-artists__item">
+                                <img
+                                    src="assets/img/sraind.png"
+                                    alt="Staind"
+                                    class="new-artists__img" />
+                                <p class="artist-title u-margin-bottom-smallest">Staind</p>
+                                <p class="artist-subtitle">Alternative</p>
+                            </li>
+                            <li class="new-artists__item">
+                                <img
+                                    src="assets/img/scorpions.png"
+                                    alt="Scorpions"
+                                    class="new-artists__img" />
+                                <p class="artist-title u-margin-bottom-smallest">Scorpions</p>
+                                <p class="artist-subtitle">Hard Rock</p>
+                            </li>
+                            <li class="new-artists__item">
+                                <img
+                                    src="assets/img/queen.png"
+                                    alt="Queen"
+                                    class="new-artists__img" />
+                                <p class="artist-title u-margin-bottom-smallest">Queen</p>
+                                <p class="artist-subtitle">Rock</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="popular">
+                        <h2 class="heading-secondary u-margin-bottom-medium-2">Popular</h2>
+                        <ul class="popular__main-list">
+                            <li class="popular__item">
+                                <a href="muso-details.html">
+                                    <img
+                                        src="assets/img/group-1.png"
+                                        alt="Linkin Park Group Photo"
+                                        class="popular__img-big u-margin-bottom-medium" />
+                                </a>
+                                <p class="artist-title u-margin-bottom-smallest">Linkin Park</p>
+                                <p class="artist-subtitle">Alternative</p>
+                            </li>
+
+                            <li class="popular__item">
+                                <a href="muso-details.html">
+                                    <img
+                                        src="assets/img/group-2.png"
+                                        alt="Nirvana Group Photo"
+                                        class="popular__img-big u-margin-bottom-medium" />
+                                </a>
+                                <p class="artist-title u-margin-bottom-smallest">Nirvana</p>
+                                <p class="artist-subtitle">Grunge</p>
+                            </li>
+
+                            <li class="popular__item">
+                                <a href="muso-details.html">
+                                    <img
+                                        src="assets/img/group-3.png"
+                                        alt="Limp Bizkit Group Photo"
+                                        class="popular__img-big u-margin-bottom-medium" />
+                                </a>
+                                <p class="artist-title u-margin-bottom-smallest">Limp Bizkit</p>
+                                <p class="artist-subtitle">Nu metal</p>
+                            </li>
+                        </ul>
+                        <ul class="popular__sub-list">
+                            <li class="popular__item">
+                                <a href="muso-details.html">
+                                    <img
+                                        src="assets/img/group-4.png"
+                                        alt="Bi-2 Group Photo"
+                                        class="popular__img-small u-margin-bottom-small" />
+                                </a>
+                                <p class="artist-title u-margin-bottom-smallest">Bi-2</p>
+                                <p class="artist-subtitle">Alternative</p>
+                            </li>
+                            <li class="popular__item">
+                                <a href="muso-details.html">
+                                    <img
+                                        src="assets/img/group-5.png"
+                                        alt="The Who Group Photo"
+                                        class="popular__img-small u-margin-bottom-small" />
+                                </a>
+                                <p class="artist-title u-margin-bottom-smallest">The Who</p>
+                                <p class="artist-subtitle">Genre</p>
+                            </li>
+                            <li class="popular__item">
+                                <a href="muso-details.html">
+                                    <img
+                                        src="assets/img/group-6.png"
+                                        alt="Bi-2 Group Photo"
+                                        class="popular__img-small u-margin-bottom-small" />
+                                </a>
+                                <p class="artist-title u-margin-bottom-smallest">Bi-2</p>
+                                <p class="artist-subtitle">Alternative</p>
+                            </li>
+                            <li class="popular__item">
+                                <a href="muso-details.html">
+                                    <img
+                                        src="assets/img/group-7.png"
+                                        alt="Staind Group Photo"
+                                        class="popular__img-small u-margin-bottom-small" />
+                                </a>
+                                <p class="artist-title u-margin-bottom-smallest">Staind</p>
+                                <p class="artist-subtitle">Rock</p>
+                            </li>
+                            <li class="popular__item">
+                                <a href="muso-details.html">
+                                    <img
+                                        src="assets/img/group-8.png"
+                                        alt="Scorpions Group Photo"
+                                        class="popular__img-small u-margin-bottom-small" />
+                                </a>
+                                <p class="artist-title u-margin-bottom-smallest">Scorpions</p>
+                                <p class="artist-subtitle">Hard Rock</p>
+                            </li>
+                            <li class="popular__item">
+                                <a href="muso-details.html">
+                                    <img
+                                        src="assets/img/group-9.png"
+                                        alt="Queen Group Photo"
+                                        class="popular__img-small u-margin-bottom-small" />
+                                </a>
+                                <p class="artist-title u-margin-bottom-smallest">Queen</p>
+                                <p class="artist-subtitle">Rock</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="browse-content search_box">
+                    <div class="search_box__content u-margin-bottom-bigest">
+                        <h2 class="heading-secondary search_box__content-title u-margin-bottom-medium-2">"Li" Results</h2>
+                        <p class="subheader search_box__content-subtitle">Nothing matches your search terms, please try again.</p>
+                        <div class="search_box__content__filter-box u-margin-bottom-bigest">
+                            <p class="subheader u-margin-bottom-medium-4">Consider removing some filters:</p>
+                            <ul class="__tags">
+                                <li class="__tags-item">
+                                    Genre
+                                    <button class="btn__input">
+                                        <svg class="icon">
+                                            <use xlink:href="assets/sprites/sprite-icon.svg#icon-close" /> 
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="__tags-item">
+                                    Average gig price
+                                    <button class="btn__input">
+                                        <svg class="icon">
+                                            <use xlink:href="assets/sprites/sprite-icon.svg#icon-close" /> 
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="search_box__content-result">
+                            <li class="search_box__content-item">
+                                <figure class="search_box__content-card">
+                                    <a href="muso-details.html">
+                                        <img
+                                            src="assets/img/group-1.png"
+                                            alt="Linkin Park Group Photo"
+                                            class="search_box__content-img" />
+                                    </a>
+                                    <figcaption class="search_box__content-desc">
+                                        <div class="search_box__content-text">
+                                            <svg class="icon">
+                                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-favorites-selected" />
+                                            </svg>
+                                            <h3 class="heading-tertiary">Linkin Park</p>
+                                        </div>
+                                        <p class="artist-subtitle search_box__content-subtext">Alternative</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="search_box__content-item">
+                                <figure class="search_box__content-card">
+                                    <a href="muso-details.html">
+                                        <img
+                                            src="assets/img/group-3.png"
+                                            alt="Limp Bizkit Group Photo"
+                                            class="search_box__content-img" />
+                                    </a>
+                                    <figcaption class="search_box__content-desc">
+                                        <div class="search_box__content-text">
+                                            <svg class="icon">
+                                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-favorites-selected" />
+                                            </svg>
+                                            <h3 class="heading-tertiary">Limp Bizkit</h3>
+                                        </div>
+                                        <p class="artist-subtitle search_box__content-subtext">Nu metal</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="search_box__content-item">
+                                <figure class="search_box__content-card">
+                                    <a href="muso-details.html">
+                                        <img
+                                            src="assets/img/group-10.png"
+                                            alt="Little Big Town Group Photo"
+                                            class="search_box__content-img" />
+                                    </a>
+                                    <figcaption class="search_box__content-desc">
+                                        <div class="search_box__content-text">
+                                            <h3 class="heading-tertiary">Little Big Town</h3>
+                                        </div>
+                                        <p class="artist-subtitle search_box__content-subtext">Grunge</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="search_box__content-item">
+                                <figure class="search_box__content-card">
+                                    <a href="muso-details.html">
+                                        <img
+                                            src="assets/img/group-11.png"
+                                            alt="Little Feat Group Photo"
+                                            class="search_box__content-img" />
+                                    </a>
+                                    <figcaption class="search_box__content-desc">
+                                        <div class="search_box__content-text">
+                                            <h3 class="heading-tertiary">Little Feat</h3>
+                                        </div>
+                                        <p class="artist-subtitle search_box__content-subtext">Alternative</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search_box__recommended">
+                        <h2 class="heading-secondary search_box__recommended-title u-margin-bottom-medium-2">Recommended for you</h2>
+                        <ul class="popular__sub-list">
+                            <li class="popular__item">
+                                <a href="muso-details.html">
+                                    <img
+                                        src="assets/img/group-4.png"
+                                        alt="Bi-2 Group Photo"
+                                        class="popular__img-small u-margin-bottom-small" />
+                                </a>
+                                <p class="artist-title u-margin-bottom-smallest">Bi-2</p>
+                                <p class="artist-subtitle">Alternative</p>
+                            </li>
+                            <li class="popular__item">
+                                <a href="muso-details.html">
+                                    <img
+                                        src="assets/img/group-5.png"
+                                        alt="The Who Group Photo"
+                                        class="popular__img-small u-margin-bottom-small" />
+                                </a>
+                                <p class="artist-title u-margin-bottom-smallest">The Who</p>
+                                <p class="artist-subtitle">Genre</p>
+                            </li>
+                            <li class="popular__item">
+                                <a href="muso-details.html">
+                                    <img
+                                        src="assets/img/group-6.png"
+                                        alt="Bi-2 Group Photo"
+                                        class="popular__img-small u-margin-bottom-small" />
+                                </a>
+                                <p class="artist-title u-margin-bottom-smallest">Bi-2</p>
+                                <p class="artist-subtitle">Alternative</p>
+                            </li>
+                            <li class="popular__item">
+                                <a href="muso-details.html">
+                                    <img
+                                        src="assets/img/group-7.png"
+                                        alt="Staind Group Photo"
+                                        class="popular__img-small u-margin-bottom-small" />
+                                </a>
+                                <p class="artist-title u-margin-bottom-smallest">Staind</p>
+                                <p class="artist-subtitle">Rock</p>
+                            </li>
+                            <li class="popular__item">
+                                <a href="muso-details.html">
+                                    <img
+                                        src="assets/img/group-8.png"
+                                        alt="Scorpions Group Photo"
+                                        class="popular__img-small u-margin-bottom-small" />
+                                </a>
+                                <p class="artist-title u-margin-bottom-smallest">Scorpions</p>
+                                <p class="artist-subtitle">Hard Rock</p>
+                            </li>
+                            <li class="popular__item">
+                                <a href="muso-details.html">
+                                    <img
+                                        src="assets/img/group-9.png"
+                                        alt="Queen Group Photo"
+                                        class="popular__img-small u-margin-bottom-small" />
+                                </a>
+                                <p class="artist-title u-margin-bottom-smallest">Queen</p>
+                                <p class="artist-subtitle">Rock</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </main>
+            <aside class="aside-right">
+                <header class="header">
+                    <h2 class="heading-secondary">Favorite Artists</h2>
+                    <a href="./favorite-artists.html" class="btn-tertiary"> View All </a>
+                </header>
+                <section class="aside-right__content aside-right__empty">
+                    <div class="aside-right__empty-box">
+                        <svg class="icon icon--big">
+                            <use xlink:href="assets/sprites/sprite-icon.svg#icon-star-big" />
+                        </svg>
+                        <p class="subtext">You don't have any favorites yet</p>
+                        <p class="artist-subtitle">You can add music bands to your favorites to be able to quickly book them</p>
+                    </div>
+                </section>
+                <button class="btn btn__input aside-right__hidden_btn">
+                    <svg class="icon">
+                        <use xlink:href="assets/sprites/sprite-icon.svg#icon-arrow-bar-left" />
+                    </svg>
+                    <svg class="icon">
+                        <use xlink:href="assets/sprites/sprite-icon.svg#icon-arrow-bar-right" />
+                    </svg>
+                </button>
+            </aside>
+        </div>
+
+        <div class="popup-wrapper">
+            <div class="popup-container">
+                <div class="popup">
+                    <button class="popup__btn-close">
+                        <svg class="icon">
+                            <use xlink:href="assets/sprites/sprite-icon.svg#icon-close"></use>
+                        </svg>
+                    </button>
+    
+                    <h1 class="heading-primary u-margin-bottom-medium-5">Filters</h1>
+    
+                    <div class="form-cta">
+                        <div class="accordion">
+                            <div class="accordion__item">
+                                <button class="btn accordion__btn" data-name="size">
+                                    <p class="accordion__btn-title">Act size</p>
+                                    <p class="accordion__btn-desc">9:00 pm – 12:00 pm</p>
+                                    <div class="accordion__btn-icons">
+                                        <div class="accordion__btn-count">
+                                            <svg class="icon accordion-icon-pen">
+                                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-pencil" />
+                                            </svg>
+                                            <div class="__count"></div>
+                                        </div>
+                                        <svg class="icon accordion-icon-arrow-down">
+                                            <use xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-down" />
+                                        </svg>
+                                        <svg class="icon accordion-icon-arrow-up">
+                                            <use xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-up" />
+                                        </svg>
+                                    </div>
+                                </button>
+                                <div class="accordion-content">
+                                    <div class="accordion-content__item">
+                                        <input type="checkbox" id="size-1"/>
+                                        <label for="size-1">
+                                            <div class="accordion__checkbox">
+                                                <svg class="icon">
+                                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-check" />
+                                                </svg>
+                                            </div>
+                                            1
+                                        </label>
+                                    </div>
+                                    <div class="accordion-content__item">
+                                        <input type="checkbox" id="size-2" />
+                                        <label for="size-2">
+                                            <div class="accordion__checkbox">
+                                                <svg class="icon">
+                                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-check" />
+                                                </svg>
+                                            </div>
+                                            2
+                                        </label>
+                                    </div>
+                                    <div class="accordion-content__item">
+                                        <input type="checkbox" id="size-3" />
+                                        <label for="size-3">
+                                            <div class="accordion__checkbox">
+                                                <svg class="icon">
+                                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-check" />
+                                                </svg>
+                                            </div>
+                                            3
+                                        </label>
+                                    </div>
+                                    <div class="accordion-content__item">
+                                        <input type="checkbox" id="size-4" />
+                                        <label for="size-4">
+                                            <div class="accordion__checkbox">
+                                                <svg class="icon">
+                                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-check" />
+                                                </svg>
+                                            </div>
+                                            4
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion__item">
+                                <button class="btn accordion__btn" data-name="genre">
+                                    <p class="accordion__btn-title">Genre</p>
+                                    <p class="accordion__btn-desc">9:00 pm – 12:00 pm</p>
+                                    <div class="accordion__btn-icons">
+                                        <div class="accordion__btn-count">
+                                            <svg class="icon accordion-icon-pen">
+                                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-pencil" />
+                                            </svg>
+                                            <div class="__count"></div>
+                                        </div>
+                                        <svg class="icon accordion-icon-arrow-down">
+                                            <use xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-down" />
+                                        </svg>
+                                        <svg class="icon accordion-icon-arrow-up">
+                                            <use xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-up" />
+                                        </svg>
+                                    </div>
+                                </button>
+                                <div class="accordion-content">
+                                    <div class="accordion-content__item">
+                                        <input type="checkbox" id="genre-1"/>
+                                        <label for="genre-1">
+                                            <div class="accordion__checkbox">
+                                                <svg class="icon">
+                                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-check" />
+                                                </svg>
+                                            </div>
+                                            Alternative
+                                        </label>
+                                    </div>
+                                    <div class="accordion-content__item">
+                                        <input type="checkbox" id="genre-2" />
+                                        <label for="genre-2">
+                                            <div class="accordion__checkbox">
+                                                <svg class="icon">
+                                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-check" />
+                                                </svg>
+                                            </div>
+                                            Grunge
+                                        </label>
+                                    </div>
+                                    <div class="accordion-content__item">
+                                        <input type="checkbox" id="genre-3" />
+                                        <label for="genre-3">
+                                            <div class="accordion__checkbox">
+                                                <svg class="icon">
+                                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-check" />
+                                                </svg>
+                                            </div>
+                                            Hard Rock
+                                        </label>
+                                    </div>
+                                    <div class="accordion-content__item">
+                                        <input type="checkbox" id="genre-4" />
+                                        <label for="genre-4">
+                                            <div class="accordion__checkbox">
+                                                <svg class="icon">
+                                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-check" />
+                                                </svg>
+                                            </div>
+                                            Nu metal
+                                        </label>
+                                    </div>
+                                    <div class="accordion-content__item">
+                                        <input type="checkbox" id="genre-5" />
+                                        <label for="genre-5">
+                                            <div class="accordion__checkbox">
+                                                <svg class="icon">
+                                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-check" />
+                                                </svg>
+                                            </div>
+                                            Post-grunge
+                                        </label>
+                                    </div>
+                                    <div class="accordion-content__item">
+                                        <input type="checkbox" id="genre-6" />
+                                        <label for="genre-6">
+                                            <div class="accordion__checkbox">
+                                                <svg class="icon">
+                                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-check" />
+                                                </svg>
+                                            </div>
+                                            Rock
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion__item">
+                                <button class="btn accordion__btn" data-name="price">
+                                    <p class="accordion__btn-title">Average gig price</p>
+                                    <p class="accordion__btn-desc">9:00 pm – 12:00 pm</p>
+                                    <div class="accordion__btn-icons">
+                                        <div class="accordion__btn-count">
+                                            <svg class="icon accordion-icon-pen">
+                                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-pencil" />
+                                            </svg>
+                                            <div class="__count"></div>
+                                        </div>
+                                        <svg class="icon accordion-icon-arrow-down">
+                                            <use xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-down" />
+                                        </svg>
+                                        <svg class="icon accordion-icon-arrow-up">
+                                            <use xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-up" />
+                                        </svg>
+                                    </div>
+                                </button>
+                                <div class="accordion-content">
+                                    <div class="accordion-content__item">
+                                        <input type="checkbox" id="price-1"/>
+                                        <label for="price-1">
+                                            <div class="accordion__checkbox">
+                                                <svg class="icon">
+                                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-check" />
+                                                </svg>
+                                            </div>
+                                            Less than $50 per hour
+                                        </label>
+                                    </div>
+                                    <div class="accordion-content__item">
+                                        <input type="checkbox" id="price-2" />
+                                        <label for="price-2">
+                                            <div class="accordion__checkbox">
+                                                <svg class="icon">
+                                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-check" />
+                                                </svg>
+                                            </div>
+                                            $50-99 per hour
+                                        </label>
+                                    </div>
+                                    <div class="accordion-content__item">
+                                        <input type="checkbox" id="price-3" />
+                                        <label for="price-3">
+                                            <div class="accordion__checkbox">
+                                                <svg class="icon">
+                                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-check" />
+                                                </svg>
+                                            </div>
+                                            $100-149 per hour
+                                        </label>
+                                    </div>
+                                    <div class="accordion-content__item">
+                                        <input type="checkbox" id="price-4" />
+                                        <label for="price-4">
+                                            <div class="accordion__checkbox">
+                                                <svg class="icon">
+                                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-check" />
+                                                </svg>
+                                            </div>
+                                            Above $150 per hour
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+    
+                        <div class="form-cta__btns">
+                            <button class="btn btn--big btn__primary filter_result">Show 12 Results</button>
+                            <buttom class="btn btn__secondary clear_btn">Clear All</buttom>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>

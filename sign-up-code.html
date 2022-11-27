@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Gigit &mdash; Sign up</title>
+    </head>
+    <body>
+        <div class="sign">
+            <div class="popup popup-auth">
+                <button class="popup__btn-close">
+                    <svg class="icon">
+                        <use xlink:href="assets/sprites/sprite-icon.svg#icon-close"></use>
+                    </svg>
+                </button>
+
+                <h1 class="heading-primary u-margin-bottom-small">Enter the code</h1>
+                <p class="subtext u-margin-bottom-big">The code has been sent to +61 111 111 111</p>
+
+                <form action="#" class="form-cta">
+                    <div class="form-cta__box">
+                        <label for="code" class="form-cta__box-label">Code from SMS</label>
+                        <input type="text" id="code" class="input input-sign" placeholder="" required/>
+                        <p class="subtext u-text-center u-margin-top-small">Recent in 30</p>
+                    </div>
+                    <div class="form-cta__btns">
+                        <a href="./muso-empty.html" class="btn btn--big btn__primary">Confirm</a>
+                        <a href="./sign-up.html" class="btn btn__secondary">Back to Sign Up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>

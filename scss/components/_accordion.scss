@@ -1,0 +1,148 @@
+.accordion {
+    width: 100%;
+
+    &__item {
+        display: block;
+        width: 100%;
+        background-color: transparent;
+
+        &:first-child {
+            border-top: 1px solid $color-light-grey-1;
+            border-bottom: 1px solid $color-light-grey-1;
+        }
+        
+        &:not(:first-child) {
+            border-bottom: 1px solid $color-light-grey-1;
+            
+        }
+
+        &:last-child {
+            .accordion__btn-title {
+                @include respond(phone) {
+                    text-align: left;
+                    margin-right: 1rem;
+                    width: 70px;
+                }
+            }
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 3rem 0;
+
+        &-title {
+            @include typography(1.4rem, 500, 1.5);
+            margin-right: 1.6rem;
+        }
+
+        &-desc {
+            @include typography(1.4rem, 400, 1.5);
+        }
+
+        &-icons {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 2.4rem;
+        }
+
+        &-count {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .__count {
+                display: none;
+                width: 2.4rem;
+                height: 2.4rem;
+                border-radius: 50%;
+                background-color: $color-coral;
+                color: $color-white;
+                position: absolute;
+                top: -2px;
+                right: -8px;
+            }
+        }
+
+        &:hover {
+            .icon {
+                fill: $color-black;
+            }
+        }
+    }
+
+    &-icon {
+        &-arrow-up {
+            display: none;
+        }
+    }
+
+    &-content {
+        display: none;
+        flex-direction: column;
+        
+        &--collapsing {
+            height: 0px;
+            transition: height .3s ease;
+        }
+        
+        &--active {
+            display: flex;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        input[type="checkbox"]:checked ~ label > .accordion__checkbox {
+            background-color: $color-coral;
+            border: 1px solid $color-coral;
+        }
+
+        input[type="checkbox"]:checked ~ label > .accordion__checkbox .icon {
+            display: block;
+        }
+
+        label {
+            @include typography(1.4rem, 400, 1.5);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        &__item {
+            margin-top: 2.7rem;
+            align-self: flex-start;
+        }
+
+        &__item:first-child {
+            margin-top: 0;
+        }
+
+        &__item:last-child {
+            margin-bottom: 3.7rem;
+        }
+    }
+
+    &__checkbox {
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 3px;
+        border: 1px solid $color-light-grey-1;
+        position: relative;
+
+        .icon {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            fill: $color-white;
+        }
+    }
+}

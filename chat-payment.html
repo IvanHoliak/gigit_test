@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Gigit &mdash; Chat</title>
+    </head>
+    <body>
+        <div class="grid col-4">
+            <nav class="navigation">
+                <header class="header">
+                    <a href="#" class="logo">
+                        <img class="logo-img" src="assets/img/logo-short.png" alt="Logo Gigit" />
+                    </a>
+                </header>
+                <ul class="navigation-list">
+                    <li class="navigation-list__item">
+                        <a href="./calendar.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./muso.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-music" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./favorite-artists.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-favorites-default" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./chat-paid.html" class="navigation-list__link navigation-list__link--active">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-messages" />
+                            </svg>
+                            <p class="navigation-list__notif">1</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./invoices.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-file_invoice" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="#" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-bell" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./profile-venue-empty.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-user" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="#" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-arrow-bar-right" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="navigation__mob">
+                <header class="header">
+                    <a href="#" class="logo">
+                        <img class="logo-img" src="assets/img/logo-full.png" alt="Logo Gigit" />
+                    </a>
+                </header>
+                <ul class="navigation-list">
+                    <li class="navigation-list__item">
+                        <a href="./calendar.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" />
+                            </svg>
+                            <p class="navigation-list__text">Calendar</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./muso.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-music" />
+                            </svg>
+                            <p class="navigation-list__text">Browse</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./favorite-artists.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-favorites-default" />
+                            </svg>
+                            <p class="navigation-list__text">Favorites</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./chat-paid.html" class="navigation-list__link navigation-list__link--active">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-messages" />
+                            </svg>
+                            <p class="navigation-list__notif">1</p>
+                            <p class="navigation-list__text">Chat</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./invoices.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-file_invoice" />
+                            </svg>
+                            <p class="navigation-list__text">Invoices</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="#" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-bell" />
+                            </svg>
+                            <p class="navigation-list__text">Notification</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./profile-venue-empty.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-user" />
+                            </svg>
+                            <p class="navigation-list__text">Profile</p>
+                        </a>
+                    </li>
+                </ul>
+                <button class="btn navigation__mob__burger-menu">
+                    <div class="line"></div>
+                </button>
+            </nav>
+            <aside class="aside-left">
+                <header class="header">
+                    <form action="#" class="chat-search-form">
+                        <div class="input-box">
+                            <input type="text" class="input" placeholder="Search venues" id="input-search"/>
+                            <label for="input-search" class="btn__input">
+                                <svg class="icon">
+                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-search" />
+                                </svg>
+                            </label>
+                        </div>
+                    </form>
+                </header>
+                <button class="btn btn-tertiary aside-left__chat-show-btn">Chat List
+                    <svg class="icon">
+                        <use xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-down" />
+                    </svg>
+                </button>
+                <section class="aside-left__content">
+                    <div class="chat__lists">
+                        <div class="chat__list-box chat__list-box--active">
+                            <ul class="chat__list">
+                                <li class="chat__item chat__item--active">
+                                    <div class="chat__item-img" aria-label="Nirvana Abbreviation">
+                                        N
+                                    </div>
+                                    <div class="chat__item-desc">
+                                        <p class="artist-title">Nirvana</p>
+                                        <p class="artist-subtitle">On Thursday, June 16 at 9 pm</p>
+                                    </div>
+                                </li>
+                                <li class="chat__item">
+                                    <div class="chat__item-img" aria-label="Staind Abbreviation">
+                                        S
+                                        <p class="chat__item-mes">1</p>
+                                    </div>
+                                    <div class="chat__item-desc">
+                                        <p class="artist-title">Staind</p>
+                                        <p class="artist-subtitle">On Tuesday, June 14 at 11 pm</p>
+                                    </div>
+                                </li>
+                                <li class="chat__item">
+                                    <div class="chat__item-img" aria-label="The Who Abbreviation">
+                                        TW
+                                    </div>
+                                    <div class="chat__item-desc">
+                                        <p class="artist-title">The Who</p>
+                                        <p class="artist-subtitle">On Friday, June 10 at 8 pm</p>
+                                    </div>
+                                </li>
+                                <li class="chat__item">
+                                    <div class="chat__item-img" aria-label="Bi-2 Abbreviation">
+                                        B
+                                    </div>
+                                    <div class="chat__item-desc">
+                                        <p class="artist-title">Bi-2</p>
+                                        <p class="artist-subtitle">On Tuesday, June 14 at 9 pm</p>
+                                    </div>
+                                </li>
+                                <li class="chat__item">
+                                    <div
+                                        class="chat__item-img"
+                                        aria-label="Limp Bizkit Abbreviation">
+                                        LB
+                                    </div>
+                                    <div class="chat__item-desc">
+                                        <p class="artist-title">Limp Bizkit</p>
+                                        <p class="artist-subtitle">On Thursday, June 23 at 8 pm</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="chat__list-box chat__list-box--complite">
+                            <ul class="chat__list">
+                                <li class="chat__item">
+                                    <div class="chat__item-img" aria-label="Complite Label">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-check" />
+                                        </svg>
+                                    </div>
+                                    <div class="chat__item-desc">
+                                        <p class="artist-title">Linkin Park</p>
+                                        <p class="artist-subtitle">On Tuesday, May 31 at 8 pm</p>
+                                    </div>
+                                </li>
+                                <li class="chat__item">
+                                    <div class="chat__item-img" aria-label="Complite Label">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-check" />
+                                        </svg>
+                                    </div>
+                                    <div class="chat__item-desc">
+                                        <p class="artist-title">Beatles</p>
+                                        <p class="artist-subtitle">On Monday, May 30 at 7 pm</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+            <main class="content chat-content">
+                <header class="header">
+                    <h1 class="heading-primary">You & Nirvana</h1>
+                </header>
+                <section class="chat-section">
+                    <div class="chat-box">
+                        <div class="chat__messages-box">
+                            <p class="chat-alert u-text-center">Today</p>
+                            <div class="chat__message-box chat__message-box--venue">
+                                <img
+                                    src="assets/img/queen.png"
+                                    alt="Venue Logo"
+                                    class="chat__avatar-img" />
+                                <div class="chat__message">
+                                    <p class="subtext u-text-color-d-g">John Doe</p>
+                                    <p class="subheader">
+                                        Hello! We would like to invite you to perform at our Verno
+                                        Bar on Thursday, June 16 at 9pm. What do you think about it?
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="chat__message-box chat__message-box--muso">
+                                <img
+                                    src="assets/img/nirvana.png"
+                                    alt="Muso Logo"
+                                    class="chat__avatar-img" />
+                                <div class="chat__message">
+                                    <p class="subtext u-text-color-d-g">Kurt Cobain</p>
+                                    <p class="subheader">That would be awesome.</p>
+                                </div>
+                            </div>
+                            <p class="chat-alert u-text-center">Muso accepted your invitation</p>
+                        </div>
+
+                        <form action="#" class="chat__form">
+                            <div class="input-box">
+                                <input type="text" class="input input-chat" placeholder="Type your message" id="input-chat"/>
+                                <label for="input-chat" class="btn__input">
+                                    <svg class="icon">
+                                        <use xlink:href="assets/sprites/sprite-icon.svg#icon-send" />
+                                    </svg>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </main>
+            <aside class="aside-right aside-right__chat">
+                <header class="header">
+                    <h2 class="heading-secondary">Gig Details</h2>
+                </header>
+                <section class="aside-right__content gig-details">
+                    <div class="gig__status gig__status--payment">Booked. Waiting for payment</div>
+
+                    <ul class="gig__list">
+                        <li class="gig__item">
+                            <svg class="icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" />
+                            </svg>
+                            <p class="subheader">Thursday, June 16</p>
+                        </li>
+                        <li class="gig__item">
+                            <svg class="icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-clock" />
+                            </svg>
+                            <p class="subheader">9:00 – 11:00 pm</p>
+                        </li>
+                        <li class="gig__item">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-currency-dollar" />
+                            </svg>
+                            <p class="subheader">200.00</p>
+                        </li>
+                    </ul>
+
+                    <a href="#" class="btn btn--full btn__outline"> View Muso Page </a>
+                    <div class="gig__bottom-btns">
+                        <button class="btn btn--big btn--full btn__primary btn_show_popup" data-name="pay-gig"> Pay for Gig </button>
+                        <button class="btn btn--full btn__outline btn__outline--cancel btn_show_popup" data-name="cancel-gig">
+                            Cancel the Gig
+                        </button>
+                    </div>
+                </section>
+                <button class="btn btn__input aside-right__hidden_btn">
+                    <svg class="icon">
+                        <use xlink:href="assets/sprites/sprite-icon.svg#icon-arrow-bar-left" />
+                    </svg>
+                    <svg class="icon">
+                        <use xlink:href="assets/sprites/sprite-icon.svg#icon-arrow-bar-right" />
+                    </svg>
+                </button>
+            </aside>
+        </div>
+
+        <div class="popup-wrapper" id="pay-gig">
+            <div class="popup-container">
+                <div class="popup">
+                    <button class="popup__btn-close">
+                        <svg class="icon">
+                            <use xlink:href="assets/sprites/sprite-icon.svg#icon-close"></use>
+                        </svg>
+                    </button>
+    
+                    <h1 class="heading-primary u-margin-bottom-medium-6">Pay for Gig</h1>
+    
+                    <div action="#" class="form-cta">
+                        <div class="form-cta__box">
+                            <label for="band" class="form-cta__box-label u-margin-bottom-smallest"
+                                >Band</label
+                            >
+                            <input
+                                type="text"
+                                id="band"
+                                class="input input__outline input__popup_h3"
+                                value="Nirvana"
+                                required
+                                disabled />
+                        </div>
+                        <div class="form-cta__box">
+                            <label for="when" class="form-cta__box-label u-margin-bottom-smallest"
+                                >When</label
+                            >
+                            <input
+                                type="text"
+                                id="when"
+                                class="input input__outline input__popup_p"
+                                value="Thursday, June 16"
+                                required
+                                disabled />
+                        </div>
+                        <div class="form-cta__box">
+                            <label for="time" class="form-cta__box-label u-margin-bottom-smallest"
+                                >Time</label
+                            >
+                            <input
+                                type="text"
+                                id="time"
+                                class="input input__outline input__popup_p"
+                                value="9:00 – 11:00 pm"
+                                required
+                                disabled />
+                        </div>
+                        <div class="form-cta__box">
+                            <label for="price" class="form-cta__box-label u-margin-bottom-smallest"
+                                >Price</label
+                            >
+                            <input
+                                type="text"
+                                id="price"
+                                class="input input__outline input__popup_p"
+                                value="$200.00"
+                                required
+                                disabled />
+                        </div>
+                        <div class="form-cta__box">
+                            <label
+                                for="subscription"
+                                class="form-cta__box-label u-margin-bottom-small"
+                                >Subscription</label
+                            >
+                            <div class="input-box">
+                                <input
+                                    id="subscription"
+                                    type="text"
+                                    class="input input-dropdown"
+                                    data-datalist="subscription-list"
+                                    placeholder="Select an option" />
+                                <ul class="datalist subscription-list">
+                                    <li data-value="all" title="Select an option" class="datalist-item">
+                                        Select an option
+                                    </li>
+                                    <li
+                                        data-value="One-timer ($50/gig, 1 gig)"
+                                        title="One-timer ($50/gig, 1 gig)"
+                                        class="datalist-item">
+                                        One-timer ($50/gig, 1 gig)
+                                    </li>
+                                    <li data-value="Explorer ($120/month, 4 gigs)" title="Explorer ($120/month, 4 gigs)" class="datalist-item">
+                                        Explorer ($120/month, 4 gigs)
+                                    </li>
+                                    <li data-value="Weekender ($160/month, 8 gigs)" title="Weekender ($160/month, 8 gigs)" class="datalist-item">
+                                        Weekender ($160/month, 8 gigs)
+                                    </li>
+                                    <li
+                                        data-value="All In ($200/month, Unlimited gigs)"
+                                        title="All In ($200/month, Unlimited gigs)"
+                                        class="datalist-item">
+                                        All In ($200/month, Unlimited gigs)
+                                    </li>
+                                </ul>
+                                <button class="btn__input btn__input--down">
+                                    <svg class="icon">
+                                        <use
+                                            xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-down" />
+                                    </svg>
+                                </button>
+                                <button class="btn__input btn__input--up">
+                                    <svg class="icon">
+                                        <use
+                                            xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-up" />
+                                    </svg>
+                                </button>
+                                <button class="btn__input btn__input--remove">
+                                    <svg class="icon">
+                                        <use xlink:href="assets/sprites/sprite-icon.svg#icon-close" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+    
+                        <div class="form-cta__btns">
+                            <a href="./chat-paid.html" class="btn btn--big btn__primary confirm_btn">Checkout</a>
+                            <buttom class="btn btn__secondary cancel_btn">Cancel</buttom>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup-wrapper" id="cancel-gig">
+            <div class="popup-container">
+                <div class="popup">
+                    <button class="popup__btn-close">
+                        <svg class="icon">
+                            <use xlink:href="assets/sprites/sprite-icon.svg#icon-close"></use>
+                        </svg>
+                    </button>
+    
+                    <h1 class="heading-primary u-margin-bottom-medium">Cancel the Gig</h1>
+                    <p class="subtext u-margin-bottom-medium-5">
+                        Please state the reason why you are canceling the gig
+                    </p>
+    
+                    <div action="#" class="form-cta">
+                        <div class="form-cta__box">
+                            <label for="reason" class="form-cta__box-label u-margin-bottom-small"
+                                >Reason</label
+                            >
+                            <div class="input-box">
+                                <input
+                                    id="reason"
+                                    type="text"
+                                    class="input input-dropdown"
+                                    data-datalist="reason-list"
+                                    placeholder="Reason" />
+                                <ul class="datalist reason-list">
+                                    <li data-value="all" title="Reason" class="datalist-item">
+                                        Reason
+                                    </li>
+                                    <li
+                                        data-value="The band didn't show up for the gig"
+                                        title="The band didn't show up for the gig"
+                                        class="datalist-item">
+                                        The band didn't show up for the gig
+                                    </li>
+                                    <li
+                                        data-value="Reason 1"
+                                        title="Reason 1"
+                                        class="datalist-item">
+                                        Reason 1
+                                    </li>
+                                    <li
+                                        data-value="Reason 2"
+                                        title="Reason 2"
+                                        class="datalist-item">
+                                        Reason 2
+                                    </li>
+                                </ul>
+                                <button class="btn__input btn__input--down">
+                                    <svg class="icon">
+                                        <use
+                                            xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-down" />
+                                    </svg>
+                                </button>
+                                <button class="btn__input btn__input--up">
+                                    <svg class="icon">
+                                        <use
+                                            xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-up" />
+                                    </svg>
+                                </button>
+                                <button class="btn__input btn__input--remove">
+                                    <svg class="icon">
+                                        <use xlink:href="assets/sprites/sprite-icon.svg#icon-close" />
+                                    </svg>
+                                </button>
+                            </div>
+    
+                            <div class="popup__alert-info">
+                                <svg class="icon">
+                                    <use xlink:href="assets/sprites/sprite-icon.svg#icon-info-circle" />
+                                </svg>
+                                <p>
+                                    Payment will be returned to your bank account
+                                </p>
+                            </div>
+                        </div>
+    
+                        <div class="form-cta__btns">
+                            <a href="./chat-canceled.html" class="btn btn--medium btn__primary confirm_btn">Cancel the Gig</a>
+                            <buttom class="btn btn__secondary cancel_btn">Back to Gig Details</buttom>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>

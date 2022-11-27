@@ -1,0 +1,162 @@
+.browse {
+
+    &-form {
+        display: flex;
+        gap: 2rem;
+
+        .input-box {
+            .input {
+                @include respond(phone) {
+                    padding: 1.2rem 0;
+                    width: 40px;
+
+                    transition: all .3s ease;
+                }
+            }
+
+            @include respond(phone) {
+                flex: none !important;
+            }   
+
+            .btn__input {
+                transition: all .3s ease;
+                @include respond(phone) {
+                    right: 50%;
+                    transform: translate(50%, -50%);
+                }
+            }
+
+            .input {
+                @include respond(phone) {
+                    color: transparent;
+                }
+                &::placeholder {
+                    @include respond(phone) {
+                        color: transparent;
+                    }
+                }
+            }
+        }
+
+        .input-box__mob {
+            .input {
+                &:focus {
+                    @include respond(phone) {
+                        width: calc(100vw - 60px - 2rem - 40px - 2rem);
+                        padding: 1.2rem 3.8rem 1.3rem 1.6rem;
+                        color: $color-black;
+                    }
+
+                    &::placeholder {
+                        @include respond(phone) {
+                            color: $color-dark-grey-3;
+                        }
+                    }
+                }
+            }
+
+            .input:focus ~ .btn__input {
+                @include respond(phone) {
+                    top: 50%;
+                    right: 1.2rem;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+
+    &-content {
+        padding-top: 3.2rem;
+
+        &__header {
+            display: flex;
+            align-items: center;
+            gap: 6.8rem;
+
+            @include respond(tab-land) {
+                flex-direction: column;
+                gap: 3rem;
+            }
+
+            &-img-box {       
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+
+                .__slide-1 {
+                    height: 19.6rem;
+                    z-index: 3;
+                }
+                .__slide-2 {
+                    height: 16.4rem;
+                    margin-right: -6.4rem;
+                    z-index: 2;
+                }
+                .__slide-3 {
+                    height: 13.2rem;
+                    margin-right: -6rem;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}
+
+.search_box {
+    display: none;
+    &__content {
+        &-result {
+            list-style: none;
+
+            display: flex;
+            justify-content: flex-start;
+            gap: 2rem;
+            flex-wrap: wrap;
+
+            @include respond(phone) {
+                justify-content: center;
+            }
+        }
+
+        &-img {
+            width: 29.5rem;
+            height: 29.5rem;
+            border-radius: 4px;
+            margin-bottom: 1.6rem;
+        }
+
+        &-text {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 5.5px;
+        }
+
+        &-subtitle {
+            display: none;
+            margin-bottom: 8.6rem;
+        }
+
+        &__filter-box {
+            display: none;
+            .__tags {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                gap: 1.2rem;
+
+                &-item {
+                    border: 1px solid $color-light-grey-1;
+                    border-radius: 6px;
+                    padding: 8px;
+
+                    @include typography(1.5rem, 500, 1.5);
+
+                    display: flex;
+                    align-items: center;
+                    gap: 2rem;
+                }
+            }
+        }
+    }
+}

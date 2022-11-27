@@ -1,0 +1,44 @@
+.invoices {
+
+    &-content {
+        padding-top: 2.4rem;
+    }
+
+    &__invoice {
+        &--declined {
+            color: $color-dark-grey-3;
+        }
+    }
+}
+
+.invoices__invoice__status {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+
+    &::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    &--due::before {
+        background-color: #F09A1A;
+    }
+    &--paid::before {
+        background-color: $color-greeen-dark;
+    }
+    &--declined::before {
+        background-color: $color-dark-grey-3;
+    }
+}
+
+.new-invoice__btn {
+    margin-left: auto;
+
+    a {
+        padding: 1.3rem 5.9rem;
+    }
+}

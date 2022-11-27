@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Gigit &mdash; Profile</title>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <script type="module" src="js/google_map.js"></script>
+    </head>
+    <body>
+        <div class="grid col-2">
+            <nav class="navigation">
+                <header class="header">
+                    <a href="#" class="logo">
+                        <img class="logo-img" src="assets/img/logo-short.png" alt="Logo Gigit" />
+                    </a>
+                </header>
+                <ul class="navigation-list">
+                    <li class="navigation-list__item">
+                        <a href="./calendar.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./muso.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-music" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./favorite-artists.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-favorites-default" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./chat-paid.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-messages" />
+                            </svg>
+                            <p class="navigation-list__notif">1</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./invoices.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-file_invoice" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="#" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-bell" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./profile-venue-empty.html" class="navigation-list__link navigation-list__link--active">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-user" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="#" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-arrow-bar-right" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="navigation__mob">
+                <header class="header">
+                    <a href="#" class="logo">
+                        <img class="logo-img" src="assets/img/logo-full.png" alt="Logo Gigit" />
+                    </a>
+                </header>
+                <ul class="navigation-list">
+                    <li class="navigation-list__item">
+                        <a href="./calendar.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-calendar" />
+                            </svg>
+                            <p class="navigation-list__text">Calendar</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./muso.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-music" />
+                            </svg>
+                            <p class="navigation-list__text">Browse</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./favorite-artists.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-favorites-default" />
+                            </svg>
+                            <p class="navigation-list__text">Favorites</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./chat-paid.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-messages" />
+                            </svg>
+                            <p class="navigation-list__notif">1</p>
+                            <p class="navigation-list__text">Chat</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./invoices.html" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use
+                                    xlink:href="assets/sprites/sprite-icon.svg#icon-file_invoice" />
+                            </svg>
+                            <p class="navigation-list__text">Invoices</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="#" class="navigation-list__link">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-bell" />
+                            </svg>
+                            <p class="navigation-list__text">Notification</p>
+                        </a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a href="./profile-venue-empty.html" class="navigation-list__link navigation-list__link--active">
+                            <svg class="navigation-list__icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-user" />
+                            </svg>
+                            <p class="navigation-list__text">Profile</p>
+                        </a>
+                    </li>
+                </ul>
+                <button class="btn navigation__mob__burger-menu">
+                    <div class="line"></div>
+                </button>
+            </nav>
+            <main class="content">
+                <header class="header">
+                    <h1 class="heading-primary">The Rum Diary Bar</h1>
+                    <div class="profile-btns">
+                        <a class="btn-tertiary btn_show_popup" data-name="edit_profile">
+                            <svg class="icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-edit" />
+                            </svg>
+                            Edit Profile</a
+                        >
+                        <a href="./sign-in.html" class="btn-tertiary">
+                            <svg class="icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-logout" />
+                            </svg>
+                            Log Out</a
+                        >
+                    </div>
+                </header>
+                <section class="profile-content">
+                    <div class="profile__logo u-margin-bottom-bigest">
+                        <img
+                            src="assets/img/the-rum-diary-bar-logo.png"
+                            alt="The Rum Diary Bar Logo"/>
+
+                        <button class="profile__logo-change-btn">
+                            <svg class="icon">
+                                <use xlink:href="assets/sprites/sprite-icon.svg#icon-camera-plus" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="details-content__desc-box">
+                        <div class="details-content__about">
+                            <h2 class="heading-secondary u-margin-bottom-medium">About</h2>
+                            <p class="subheader u-margin-bottom-medium">
+                                Welcome to The Rum Diary. This is where the rum's gone and there's
+                                enough to sink a pirate ship. With hundreds of rum's to choose from,
+                                we have something for everyone.
+                            </p>
+                            <p class="subheader u-margin-bottom-bigest">
+                                Dive into one of our unique and atmospheric venues to find both a
+                                cosy environment to impress your friends with great cocktails or
+                                liven up the evening with live music whilst exploring the rums from
+                                across the globe.
+                            </p>
+                            <div class="profile__details-flex">
+                                <div class="profile__details">
+                                    <h2 class="heading-secondary u-margin-bottom-medium-4">
+                                        Venue Details
+                                    </h2>
+                                    <p class="bold-text profile__details-content__detail">
+                                        Contact Name
+                                        <span class="subheader">John Doe</span>
+                                    </p>
+                                    <p class="bold-text profile__details-content__detail">
+                                        Address
+                                        <span class="subheader"
+                                            >334 Brunswick St, Fitzroy VIC 3065</span
+                                        >
+                                    </p>
+                                    <p class="bold-text profile__details-content__detail">
+                                        ABN <span class="subheader">34 190 894 963</span>
+                                    </p>
+                                    <p class="bold-text profile__details-content__detail">
+                                        Email
+                                        <span class="subheader">manager@rumdiarybar.com.au</span>
+                                    </p>
+                                    <p class="bold-text profile__details-content__detail">
+                                        Phone <span class="subheader">0418 708 369</span>
+                                    </p>
+                                </div>
+                                <div class="profile__subscription">
+                                    <h2 class="heading-secondary u-margin-bottom-medium-4">
+                                        Subscription
+                                    </h2>
+                                    <p class="bold-text profile__details-content__detail">
+                                        Your Plan <span class="subheader">Free-trial</span>
+                                    </p>
+                                    <p class="bold-text profile__details-content__detail">
+                                        Valid until <span class="subheader">July 31, 2022</span>
+                                    </p>
+                                    <p class="bold-text profile__details-content__detail">
+                                        Passed Gigs <span class="subheader">5/8</span>
+                                    </p>
+                                    <a href="#" class="btn btn__outline profile__upgrade-plan"
+                                        >Upgrade Your Plan</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="details-content__gallery">
+                            <h2 class="heading-secondary u-margin-bottom-medium">Gallery</h2>
+                            <header class="details-content__gallery-header">
+                                <div class="details-content__gallery-header__img-box">
+                                    <img
+                                        src="assets/img/the-rum-diary-bar-logo.png"
+                                        alt="The Rum Diary Bar Logo"
+                                        class="details-content__gallery-header__img" />
+                                </div>
+                                <span class="text-bold">rumdiarybar</span>
+                                <svg
+                                    width="17"
+                                    height="17"
+                                    viewBox="0 0 17 17"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.5 0L10.3084 1.75108L12.75 1.13878L13.4406 3.55944L15.8612 4.25L15.2489 6.69163L17 8.5L15.2489 10.3084L15.8612 12.75L13.4406 13.4406L12.75 15.8612L10.3084 15.2489L8.5 17L6.69163 15.2489L4.25 15.8612L3.55944 13.4406L1.13878 12.75L1.75108 10.3084L0 8.5L1.75108 6.69163L1.13878 4.25L3.55944 3.55944L4.25 1.13878L6.69163 1.75108L8.5 0Z"
+                                        fill="#1F93ED" />
+                                    <path
+                                        d="M5.46359 8.25659C5.13798 8.00056 4.66647 8.05696 4.41044 8.38257C4.1544 8.70817 4.2108 9.17968 4.53641 9.43572L5.46359 8.25659ZM7.73913 11L7.27554 11.5896C7.56699 11.8187 7.98215 11.8006 8.25246 11.5468L7.73913 11ZM12.5133 7.5468C12.8153 7.2633 12.8303 6.78866 12.5468 6.48667C12.2633 6.18468 11.7887 6.16969 11.4867 6.4532L12.5133 7.5468ZM4.53641 9.43572L7.27554 11.5896L8.20272 10.4104L5.46359 8.25659L4.53641 9.43572ZM8.25246 11.5468L12.5133 7.5468L11.4867 6.4532L7.2258 10.4532L8.25246 11.5468Z"
+                                        fill="white" />
+                                </svg>
+                            </header>
+                            <figure class="details-content__gallery-items">
+                                <img
+                                    src="assets/img/gallery-10.png"
+                                    alt="Photo 1"
+                                    class="details-content__gallery-item" />
+                                <img
+                                    src="assets/img/gallery-11.png"
+                                    alt="Photo 2"
+                                    class="details-content__gallery-item" />
+                                <img
+                                    src="assets/img/gallery-12.png"
+                                    alt="Photo 3"
+                                    class="details-content__gallery-item" />
+                                <img
+                                    src="assets/img/gallery-13.png"
+                                    alt="Photo 4"
+                                    class="details-content__gallery-item" />
+                                <img
+                                    src="assets/img/gallery-14.png"
+                                    alt="Photo 5"
+                                    class="details-content__gallery-item" />
+                                <img
+                                    src="assets/img/gallery-15.png"
+                                    alt="Photo 6"
+                                    class="details-content__gallery-item" />
+                                <img
+                                    src="assets/img/gallery-16.png"
+                                    alt="Photo 7"
+                                    class="details-content__gallery-item" />
+                                <img
+                                    src="assets/img/gallery-17.png"
+                                    alt="Photo 8"
+                                    class="details-content__gallery-item" />
+                                <img
+                                    src="assets/img/gallery-18.png"
+                                    alt="Photo 9"
+                                    class="details-content__gallery-item" />
+                            </figure>
+                            <a href="#" class="btn btn__outline profile__remove-btn">Remove Instagram Gallery</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <div class="popup-wrapper">
+            <div class="popup-container">
+                <div class="popup">
+                    <button class="popup__btn-close">
+                        <svg class="icon">
+                            <use xlink:href="assets/sprites/sprite-icon.svg#icon-close"></use>
+                        </svg>
+                    </button>
+    
+                    <h1 class="heading-primary u-margin-bottom-medium-5">Upgrade Your Plan</h1>
+    
+                    <form action="#" class="form-cta">
+                        <div class="card card--current">
+                            <input type="radio" id="plan-1" name="plan" class="input__plan"/>
+                            <label for="plan-1" class="card__plan-btn">
+                                <div class="card__plan-btn__radio"></div>
+                                <div class="card__plan-btn__desc">
+                                    <h3 class="heading-tertiary">One-timer</h3>
+                                    <p class="subheader">1 gig</p>
+                                </div>
+                                <div class="card__plan-btn__price">
+                                    <h3 class="heading-tertiary">$50/gig</h3>
+                                    <p class="subheader">Current plan</p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="card card--active">
+                            <input type="radio" id="plan-2" name="plan" class="input__plan" checked/>
+                            <label for="plan-2" class="card__plan-btn">
+                                <div class="card__plan-btn__radio"></div>
+                                <div class="card__plan-btn__desc">
+                                    <h3 class="heading-tertiary">Explorer</h3>
+                                    <p class="subheader">4 gigs</p>
+                                </div>
+                                <div class="card__plan-btn__price">
+                                    <h3 class="heading-tertiary">$120/month</h3>
+                                    <p class="subheader"></p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="card">
+                            <input type="radio" id="plan-3" name="plan" class="input__plan"/>
+                            <label for="plan-3" class="card__plan-btn">
+                                <div class="card__plan-btn__radio"></div>
+                                <div class="card__plan-btn__desc">
+                                    <h3 class="heading-tertiary">Weekender</h3>
+                                    <p class="subheader">8 gigs</p>
+                                </div>
+                                <div class="card__plan-btn__price">
+                                    <h3 class="heading-tertiary">$160/month</h3>
+                                    <p class="subheader"></p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="card">
+                            <input type="radio" id="plan-4" name="plan" class="input__plan"/>
+                            <label for="plan-4" class="card__plan-btn">
+                                <div class="card__plan-btn__radio"></div>
+                                <div class="card__plan-btn__desc">
+                                    <h3 class="heading-tertiary">All In</h3>
+                                    <p class="subheader">Unlimited gigs</p>
+                                </div>
+                                <div class="card__plan-btn__price">
+                                    <h3 class="heading-tertiary">$200/month</h3>
+                                    <p class="subheader"></p>
+                                </div>
+                            </label>
+                        </div>
+    
+                        <div class="form-cta__btns">
+                            <button class="btn btn--big btn__primary">Continue</button>
+                            <buttom class="btn btn__secondary cancel_btn">Cancel</buttom>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup-wrapper" id="edit_profile">
+            <div class="popup-container">
+                <div class="popup popup__details">
+                    <button class="popup__btn-close">
+                        <svg class="icon">
+                            <use xlink:href="assets/sprites/sprite-icon.svg#icon-close"></use>
+                        </svg>
+                    </button>
+    
+                    <h1 class="heading-primary u-margin-bottom-medium">
+                        Tell us more about <br />
+                        your Venue
+                    </h1>
+                    <p class="subtext u-margin-bottom-big">
+                        To access all of the site's features and allow <br />
+                        music groups to learn more about you
+                    </p>
+    
+                    <div class="popup__content popup__content--active">
+                        <div class="popup__steps">
+                            <div class="popup__step-box">
+                                <div class="popup__progressbar popup__progressbar--step-1"></div>
+                                <div class="popup__progressbar-inner">
+                                    <p class="popup__step">1/5</p>
+                                </div>
+                            </div>
+                            <p class="popup__steps-title">Venue Details</p>
+                        </div>
+    
+                        <form action="#" class="form-cta">
+                            <div class="form-cta__box">
+                                <label for="name" class="form-cta__box-label">Name of your Venue</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    class="input"
+                                    placeholder="Venue"
+                                    value="Verno"
+                                    required />
+                            </div>
+                            <div class="form-cta__box">
+                                <label for="email" class="form-cta__box-label">Venue Email</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    class="input"
+                                    placeholder="mail@sitename.com"
+                                    value="manager@rumdiarybar.com.au"
+                                    required />
+                            </div>
+                            <div class="form-cta__box">
+                                <label for="phone" class="form-cta__box-label">Venue Phone</label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    class="input"
+                                    placeholder="+61 111 111 111"
+                                    value="+61 111 111 111"
+                                    required />
+                            </div>
+                            <div class="form-cta__box">
+                                <label for="website" class="form-cta__box-label">Venue Website</label>
+                                <input
+                                    type="url"
+                                    id="website"
+                                    class="input"
+                                    placeholder="sitename.com"
+                                    value="rumdiarybar.com.au"
+                                    required />
+                            </div>
+                            <div class="form-cta__btns">
+                                <button class="btn btn--big btn__primary next_btn">Continue</button>
+                                <buttom class="btn btn__secondary cancel_btn">Cancel</buttom>
+                            </div>
+                        </form>
+                    </div>
+    
+                    <div class="popup__content">
+                        <div class="popup__steps">
+                            <div class="popup__step-box">
+                                <div class="popup__progressbar popup__progressbar--step-2"></div>
+                                <div class="popup__progressbar-inner">
+                                    <p class="popup__step">2/5</p>
+                                </div>
+                            </div>
+                            <p class="popup__steps-title">About Venue</p>
+                        </div>
+    
+                        <form action="#" class="form-cta">
+                            <div class="form-cta__box popup__text-area-box">
+                                <label for="description" class="form-cta__box-label"
+                                    >Brief description of your Venue</label
+                                >
+                                <textarea
+                                    name="description"
+                                    id="description"
+                                    class="input"
+                                    placeholder="2-3 sentences"
+                                    required></textarea>
+                            </div>
+                            <div class="form-cta__btns">
+                                <button class="btn btn--big btn__primary next_btn">Continue</button>
+                                <buttom class="btn btn__secondary prev_btn">Previous step</buttom>
+                            </div>
+                        </form>
+                    </div>
+    
+                    <div class="popup__content">
+                        <div class="popup__steps">
+                            <div class="popup__step-box">
+                                <div class="popup__progressbar popup__progressbar--step-3"></div>
+                                <div class="popup__progressbar-inner">
+                                    <p class="popup__step">3/5</p>
+                                </div>
+                            </div>
+                            <p class="popup__steps-title">Venue Contact</p>
+                        </div>
+    
+                        <form action="#" class="form-cta">
+                            <div class="form-cta__box">
+                                <label for="name" class="form-cta__box-label">Contact Full Name</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    class="input"
+                                    placeholder="John Doe"
+                                    value="John Doe"
+                                    required />
+                            </div>
+                            <div class="form-cta__box">
+                                <label for="email" class="form-cta__box-label">Contact Email</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    class="input"
+                                    placeholder="mail@sitename.com"
+                                    value="manager@rumdiarybar.com.au"
+                                    required />
+                            </div>
+                            <div class="form-cta__box">
+                                <label for="phone" class="form-cta__box-label">Contact Phone</label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    class="input"
+                                    placeholder="+61 111 111 111"
+                                    value="+61 111 111 111"
+                                    required />
+                            </div>
+                            <div class="form-cta__box">
+                                <label for="email" class="form-cta__box-label"
+                                    >Position at the Venue</label
+                                >
+                                <input
+                                    type="url"
+                                    id="email"
+                                    class="input"
+                                    placeholder="For example, a supervisor"
+                                    value="Manager"
+                                    required />
+                            </div>
+                            <div class="form-cta__btns">
+                                <button class="btn btn--big btn__primary next_btn">Continue</button>
+                                <buttom class="btn btn__secondary prev_btn">Previous step</buttom>
+                            </div>
+                        </form>
+                    </div>
+    
+                    <div class="popup__content">
+                        <div class="popup__steps">
+                            <div class="popup__step-box">
+                                <div class="popup__progressbar popup__progressbar--step-4"></div>
+                                <div class="popup__progressbar-inner">
+                                    <p class="popup__step">4/5</p>
+                                </div>
+                            </div>
+                            <p class="popup__steps-title">Location</p>
+                        </div>
+    
+                        <form action="#" class="form-cta">
+                            <div class="form-cta__box input-box">
+                                <input
+                                    type="text"
+                                    id="location"
+                                    class="input"
+                                    placeholder="Location"
+                                    value="12 Croydon Ave Croydon NSW 2132"
+                                    required />
+                                <div class="btn__input">
+                                    <svg class="icon">
+                                        <use xlink:href="assets/sprites/sprite-icon.svg#icon-map-pin" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div id="map"></div>
+                            <div class="form-cta__btns">
+                                <button class="btn btn--big btn__primary next_btn">Continue</button>
+                                <buttom class="btn btn__secondary prev_btn">Previous step</buttom>
+                            </div>
+                        </form>
+                    </div>
+    
+                    <div class="popup__content">
+                        <div class="popup__steps">
+                            <div class="popup__step-box">
+                                <div class="popup__progressbar popup__progressbar--step-5"></div>
+                                <div class="popup__progressbar-inner">
+                                    <p class="popup__step">5/5</p>
+                                </div>
+                            </div>
+                            <p class="popup__steps-title">Musical Preferences</p>
+                        </div>
+    
+                        <div class="form-cta">
+                            <div class="form-cta__box">
+                                <label for="livegigs" class="form-cta__box-label"
+                                    >Live Gigs Per Week
+                                </label>
+                                <div class="input-box">
+                                    <input
+                                        id="livegigs"
+                                        type="text"
+                                        class="input input-dropdown"
+                                        data-datalist="livegigs-list"
+                                        placeholder="Select an option"
+                                        value="2" />
+                                    <ul class="datalist livegigs-list">
+                                        <li data-value="all" title="Select an option" class="datalist-item">
+                                            Select an option
+                                        </li>
+                                        <li
+                                            data-value="Option one"
+                                            title="Option one"
+                                            class="datalist-item">
+                                            Option one
+                                        </li>
+                                        <li
+                                            data-value="Option two"
+                                            title="Option two"
+                                            class="datalist-item">
+                                            Option two
+                                        </li>
+                                        <li
+                                            data-value="Option three"
+                                            title="Option three"
+                                            class="datalist-item">
+                                            Option three
+                                        </li>
+                                    </ul>
+                                    <button class="btn__input btn__input--down">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-down" />
+                                        </svg>
+                                    </button>
+                                    <button class="btn__input btn__input--up">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-up" />
+                                        </svg>
+                                    </button>
+                                    <button class="btn__input btn__input--remove">
+                                        <svg class="icon">
+                                            <use xlink:href="assets/sprites/sprite-icon.svg#icon-close" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-cta__box">
+                                <label for="what_hights" class="form-cta__box-label"
+                                    >What night/s of the week do you host Live Music?</label
+                                >
+                                <div class="input-box">
+                                    <input
+                                        id="what_hights"
+                                        type="text"
+                                        class="input input-dropdown"
+                                        data-datalist="what_hights-list"
+                                        placeholder="Select an option" 
+                                        value="All" />
+                                    <ul class="datalist what_hights-list">
+                                        <li data-value="all" title="Select an option" class="datalist-item">
+                                            Select an option
+                                        </li>
+                                        <li
+                                            data-value="Option one"
+                                            title="Option one"
+                                            class="datalist-item">
+                                            Option one
+                                        </li>
+                                        <li
+                                            data-value="Option two"
+                                            title="Option two"
+                                            class="datalist-item">
+                                            Option two
+                                        </li>
+                                        <li
+                                            data-value="Option three"
+                                            title="Option three"
+                                            class="datalist-item">
+                                            Option three
+                                        </li>
+                                    </ul>
+                                    <button class="btn__input btn__input--down">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-down" />
+                                        </svg>
+                                    </button>
+                                    <button class="btn__input btn__input--up">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-up" />
+                                        </svg>
+                                    </button>
+                                    <button class="btn__input btn__input--remove">
+                                        <svg class="icon">
+                                            <use xlink:href="assets/sprites/sprite-icon.svg#icon-close" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-cta__box">
+                                <label for="preferred_genres" class="form-cta__box-label"
+                                    >Preferred Music Genres</label
+                                >
+                                <div class="input-box">
+                                    <input
+                                        id="preferred_genres"
+                                        type="text"
+                                        class="input input-dropdown"
+                                        data-datalist="preferred_genres-list"
+                                        placeholder="Select an option" 
+                                        value="Grange" />
+                                    <ul class="datalist preferred_genres-list">
+                                        <li data-value="all" title="Select an option" class="datalist-item">
+                                            Select an option
+                                        </li>
+                                        <li
+                                            data-value="Option one"
+                                            title="Option one"
+                                            class="datalist-item">
+                                            Option one
+                                        </li>
+                                        <li
+                                            data-value="Option two"
+                                            title="Option two"
+                                            class="datalist-item">
+                                            Option two
+                                        </li>
+                                        <li
+                                            data-value="Option three"
+                                            title="Option three"
+                                            class="datalist-item">
+                                            Option three
+                                        </li>
+                                    </ul>
+                                    <button class="btn__input btn__input--down">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-down" />
+                                        </svg>
+                                    </button>
+                                    <button class="btn__input btn__input--up">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-up" />
+                                        </svg>
+                                    </button>
+                                    <button class="btn__input btn__input--remove">
+                                        <svg class="icon">
+                                            <use xlink:href="assets/sprites/sprite-icon.svg#icon-close" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-cta__box">
+                                <label for="preferred_gig_dur" class="form-cta__box-label"
+                                    >Preferred Gig Duration (hours)</label
+                                >
+                                <div class="input-box">
+                                    <input
+                                        id="preferred_gig_dur"
+                                        type="text"
+                                        class="input input-dropdown"
+                                        data-datalist="preferred_gig_dur-list"
+                                        placeholder="Select an option" 
+                                        value="2" />
+                                    <ul class="datalist preferred_gig_dur-list">
+                                        <li
+                                            data-value="all"
+                                            title="Select an option"
+                                            class="datalist-item">
+                                            Select an option
+                                        </li>
+                                        <li
+                                            data-value="Option one"
+                                            title="Option one"
+                                            class="datalist-item">
+                                            Option one
+                                        </li>
+                                        <li
+                                            data-value="Option two"
+                                            title="Option two"
+                                            class="datalist-item">
+                                            Option two
+                                        </li>
+                                        <li
+                                            data-value="Option three"
+                                            title="Option three"
+                                            class="datalist-item">
+                                            Option three
+                                        </li>
+                                    </ul>
+                                    <button class="btn__input btn__input--down">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-down" />
+                                        </svg>
+                                    </button>
+                                    <button class="btn__input btn__input--up">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-chevron-up" />
+                                        </svg>
+                                    </button>
+                                    <button class="btn__input btn__input--remove">
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="assets/sprites/sprite-icon.svg#icon-close" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-cta__btns">
+                                <a href="./profile-venue-full.html" class="btn btn--big btn__primary confirm_btn">Confirm</a>
+                                <buttom class="btn btn__secondary prev_btn">Previous step</buttom>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ219sDQkTTKF0lSVk2R1gmPN-I8Ickg8&callback=initMap&libraries=places&v=weekly"
+            defer
+        ></script>
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>

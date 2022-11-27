@@ -1,0 +1,76 @@
+.grid {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+
+    @include respond(tab-land) {
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    &.col-2 {
+        grid-template-columns: 8rem 1fr;
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    &.col-3 {
+        grid-template-columns: 8rem 1fr 344px;
+
+        @include respond(tab-land) {
+            grid-template-columns: 8rem 1fr 260px;
+        }
+
+        @include respond(tab-port) {
+            grid-template-columns: 8rem 1fr;
+        }
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+        }
+        
+        &--left {
+            grid-template-columns: 8rem 320px 1fr;
+
+            @include respond(tab-land) {
+                grid-template-columns: 8rem 1fr;
+            }
+
+            @include respond(phone) {
+                grid-template-columns: 1fr;
+                // grid-template-rows: 1fr 1fr;
+            }
+        }
+
+        &--right {
+
+        }
+    }
+
+    &.col-4 {
+        grid-template-columns: 8rem 320px 1fr 344px;
+
+        @include respond(tab-land) {
+            grid-template-columns: 8rem 1fr;
+        }
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &.col-7 {
+        grid-template-columns: repeat(7, 1fr);
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &.row-5 {
+        grid-template-rows: repeat(5, 1fr);
+    }
+}
